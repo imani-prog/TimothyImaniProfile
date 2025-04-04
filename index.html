@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Imani | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <h1>Timothy Imani</h1>
+            <ul>
+                <!-- Navigation Links -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#cv">Download CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Theme Toggle Button -->
+                <li><button id="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Hi, I'm Timothy Imani</h2>
+        <p>Database Administrator, Data Engineer, Web Developer</p>
+    </section>
+    
+    <!-- About and Skills Section -->
+    <div id="about-skills-container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>As an aspiring Database Administrator (DBA) with a strong interest in 
+                Data Engineering and Web Development, I am passionate about managing 
+                databases, optimizing data pipelines, and building scalable web solutions. 
+                As an entry-level professional, I thrive on learning new technologies, 
+                exploring innovative solutions, and continuously advancing my skills. 
+                I enjoy solving complex problems, improving system efficiency, 
+                and staying up-to-date with industry trends. Every challenge is an 
+                opportunity to grow, and I’m excited to build impactful solutions that
+                 drive efficiency and innovation.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Database Administration (SQL Server, MySQL, Oracle)</li>
+                <li>Data Engineering & ETL</li>
+                <li>Programming languages (Python, Java, C++)</li>
+                <li>Tools and IDEs (Git, GitHub, VS Code, NetBeans, Code Blocks)</li>
+                <li>Data Analysis using Excel</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="project-title">
+            <h2>Sample Projects</h2>
+            <p>These are some of the projects I’ve worked on as a junior, where I applied my skills in database management, data engineering, and web development. I have experience in automating data workflows, building interactive systems, and creating responsive websites that offer seamless user experiences, all while ensuring efficient back-end processes and smooth integration with databases.</p>
+        </div>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Sample Data Importing Using Python</h3>
+                <p>Explore the project on <a href="https://github.com/imani-prog/data_importing.git" target="_blank">GitHub</a> or try the <a href="https://imani-prog-data-importing-dashboard-jhzokj.streamlit.app/" target="_blank">deployed app</a>.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Watulivu Barber Shop</h3>
+                <p>Visit the <a href="https://imani-prog.github.io/BarberShop/" target="_blank">live site</a> or check out the <a href="https://github.com/imani-prog/BarberShop.git" target="_blank">GitHub repository</a>.</p>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Dorca Hospital Management System</h3>
+                <p>Check out the <a href="https://github.com/imani-prog/DorcaHospitalManagementSystem.git" target="_blank">GitHub repository</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV and Contact Section -->
+    <section id="cv-contact-container">
+        <!-- CV Section -->
+        <div class="cv-card">
+            <h2>Download My CV</h2>
+            <iframe src="./Assets/Timothy_Imani_CV.pdf" class="cv-preview" title="CV Preview"></iframe>
+            <a href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a>
+        </div>
+        <!-- Contact Section -->
+        <div class="contact-card">
+            <h2>Contact</h2>
+            <form id="contact-form" action="https://formspree.io/f/mrbpyrjp" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>Email: <a href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/imani-prog" target="_blank">github.com/imani-prog</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">www.linkedin.com/in/timothy-imani-5677ba253</a></p>
+        <p>&copy; 2025 Timothy Imani. <br> All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

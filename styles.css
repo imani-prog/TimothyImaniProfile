@@ -1,0 +1,464 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 2rem; /* Updated margin to match the section below */
+    background: rgb(75, 2, 2);
+    color: white;
+    border-radius: 10px; /* Added border radius */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+nav:hover {
+    background: rgb(100, 10, 10); /* Slightly lighter background on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow on hover */
+    cursor: pointer; /* Added pointer cursor */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 20px;
+    font-style: italic;
+}
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    margin: 2rem; /* Added margins all around */
+    color: black;
+    font-size: 30px;
+    background: #e6e6e6; /* Set the hover color as the background color */
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+#hero:hover {
+    transform: scale(1.05); /* Slightly enlarge the hero section to appear as if coming forward */
+    background: antiquewhite; /* Set the original background color as the hover color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect */
+    cursor: pointer; /* Added pointer cursor */
+}
+
+#about-skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem; /* Reduced space between the sections */
+    margin: 2rem; /* Add margin around the container */
+}
+
+#about {
+    flex: 1; /* Allow the about section to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    background: #e6e6e6; /* Set the hover color as the background color */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
+    max-width: 450px; /* Increased size to reduce empty space */
+    margin: 2rem; /* Add margin for spacing */
+}
+#about:hover {
+    transform: scale(1.05); /* Slightly enlarge the section to appear as if coming forward */
+    background: antiquewhite; /* Maintain the hover background color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer; /* Added pointer cursor */
+}
+#about h2 {
+    text-align: center; /* Center align the heading */
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Georgia", serif;
+    color: #333;
+    margin: 0;
+}
+#about p {
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.8;
+    color: black;
+    text-align: left;
+    margin: 0;
+}
+
+#skills {
+    max-width: 450px; /* Match the max-width of the #about section */
+    margin: 2rem; /* Add consistent margin like #about */
+    padding: 2rem; /* Add consistent padding like #about */
+    flex: none; /* Prevent flex items from stretching */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align content vertically */
+    align-items: center; /* Center align content horizontally */
+    gap: 1rem;
+    background: #e6e6e6; /* Set the hover color as the background color */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 18px; /* Match font size with #about */
+    font-style: italic; /* Match font style with #about */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
+    line-height: 1.8; /* Match line height with #about */
+    color: black; /* Match text color with #about */
+    text-align: left; /* Match text alignment with #about */
+}
+#skills:hover {
+    transform: scale(1.05); /* Slightly enlarge the section to appear as if coming forward */
+    background: antiquewhite; /* Maintain the hover background color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer; /* Added pointer cursor */
+}
+#skills h2 {
+    margin-bottom: 0.5rem; /* Reduce the space below the heading */
+}
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center; /* Center align the skills */
+    margin-top: 0; /* Remove any additional margin above the list */
+}
+#skills li {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+#skills li:hover {
+    background: #ddd;
+    transform: scale(1.05);
+    cursor: pointer; /* Added pointer cursor */
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center; /* Ensure all child elements, including h2, are centered */
+}
+.project-card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+.project-card:hover {
+    background: antiquewhite; /* Match hover background color with #about */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect with #about */
+    transform: scale(1.05); /* Slightly enlarge the card to appear as if coming forward */
+    cursor: pointer; /* Maintain pointer cursor */
+}
+.project-grid h2 {
+    display: block; /* Ensure it behaves as a block element */
+    margin: 0 auto; /* Center horizontally */
+    margin-left: auto; /* Add left margin to test movement */
+    text-align: center; /* Center the text */
+}
+
+/* Projects Section */
+#projects {
+    font-size: 18px; /* Match font size with #about */
+    font-style: italic; /* Match font style with #about */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
+    line-height: 1.8; /* Match line height with #about */
+    color: black; /* Match text color with #about */
+    text-align: left; /* Match text alignment with #about */
+}
+.project-title {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Ensure text alignment */
+    margin: 1rem auto; /* Center the section and add spacing */
+}
+.project-title h2 {
+    margin-bottom: 0.5rem; /* Add spacing below the heading */
+    text-align: center; /* Center-align the heading */
+}
+.project-title p {
+    text-align: center; /* Center-align the text */
+    margin: 0.5rem auto; /* Add spacing and center horizontally */
+    font-size: 16px; /* Set a readable font size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Set a subtle text color */
+    max-width: 600px; /* Limit the width of the text */
+}
+.project-title h2 {
+    font-size: 24px; /* Match heading font size with #about h2 */
+    font-style: italic; /* Match heading font style */
+    font-family: "Georgia", serif; /* Match heading font family */
+    color: #333; /* Match heading color */
+}
+.project-title p {
+    font-size: 18px; /* Match paragraph font size with #about p */
+    font-style: italic; /* Match paragraph font style */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
+    line-height: 1.8; /* Match paragraph line height */
+    color: black; /* Match paragraph text color */
+}
+.project-title h2, .project-title p {
+    transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+body:not(.dark-mode) .project-title h2, 
+body:not(.dark-mode) .project-title p {
+    color: #333; /* Dark text for light mode */
+}
+
+body.dark-mode .project-title h2, 
+body.dark-mode .project-title p {
+    color: #ddd; /* Light text for dark mode */
+}
+.project-card h3 {
+    font-size: 20px; /* Adjust font size for project titles */
+    font-style: italic; /* Match font style */
+    font-family: "Georgia", serif; /* Match font family */
+    color: #333; /* Match text color */
+}
+.project-card p {
+    font-size: 18px; /* Match paragraph font size */
+    font-style: italic; /* Match paragraph font style */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
+    line-height: 1.8; /* Match paragraph line height */
+    color: black; /* Match paragraph text color */
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+form input, form textarea {
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 0.5rem;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #ffcc00;
+    color: black;
+    cursor: pointer; /* Added pointer cursor */
+}
+
+/* CV Section */
+#cv-contact-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out the CV and Contact sections */
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Add spacing between the sections */
+    padding: 2rem; /* Add padding around the container */
+}
+
+#cv-contact-container .cv-card, 
+#cv-contact-container .contact-card {
+    max-width: 450px; /* Match the max-width of the #about section */
+    margin: 2rem; /* Add consistent margin like #about */
+    padding: 2rem; /* Add consistent padding like #about */
+    flex: none; /* Prevent flex items from stretching */
+}
+
+.cv-card, .contact-card {
+    background: #f4f4f4; /* Match the background color of project cards */
+    text-align: center; /* Center-align the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Match the shadow of project cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.cv-card h2, .contact-card h2 {
+    font-size: 20px; /* Match font size with project card titles */
+    font-style: italic; /* Match font style */
+    font-family: "Georgia", serif; /* Match font family */
+    color: #333; /* Match text color */
+    margin-bottom: 0.5rem; /* Add spacing below the heading */
+}
+
+.cv-card a, .contact-card a {
+    color: blue; /* Set the text color to blue to appear like a link */
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Ensure the cursor is a pointer */
+}
+
+.cv-card a:hover, .contact-card a:hover {
+    color: blue; /* Maintain the blue color on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
+}
+
+.cv-card:hover, .contact-card:hover {
+    background: antiquewhite; /* Match hover background color with project cards */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect */
+    transform: scale(1.05); /* Slightly enlarge the card to appear as if coming forward */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+.contact-card {
+    max-width: 450px; /* Match the max-width of the .cv-card */
+    margin: 2rem; /* Add consistent margin like .cv-card */
+    padding: 2rem; /* Add consistent padding like .cv-card */
+    flex: none; /* Prevent flex items from stretching */
+}
+
+.cv-preview {
+    width: 100%; /* Make the preview span the full width of the card */
+    height: 150px; /* Set a small height for the preview */
+    border: 1px solid #ccc; /* Add a border around the preview */
+    margin-bottom: 1rem; /* Add spacing below the preview */
+    border-radius: 5px; /* Match the border radius of the card */
+}
+
+/* Footer */
+#footer {
+    background: #f4f4f4; /* Match the background color of the contact section */
+    text-align: center; /* Center-align the text */
+    padding: 1rem; /* Add padding around the footer */
+    font-size: 16px; /* Set a readable font size */
+    font-style: italic; /* Match font style */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family */
+    color: black; /* Match text color */
+    border-top: 1px solid #ccc; /* Add a top border to separate the footer */
+    margin: 2rem; /* Match the margins of the hero section */
+    border-radius: 10px; /* Match the border radius of the hero section */
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.dark-mode #theme-toggle {
+    background: #555; /* Darker button background in dark mode */
+    color: white; /* Light text for contrast */
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: #ffcc00; /* Bright yellow background */
+    color: black; /* Black text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make it circular */
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+    font-size: 18px; /* Set a readable font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#theme-toggle:hover {
+    background: #ffa500; /* Slightly darker yellow on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 0.5rem; /* Reduce gap between links */
+    }
+    nav ul li a {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    /* About and Skills Sections */
+    #about-skills-container {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 1rem; /* Maintain spacing between sections */
+    }
+    #about, #skills {
+        max-width: 100%; /* Allow sections to take full width */
+        margin: 1rem 0; /* Adjust margins for vertical stacking */
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr; /* Display one project per row */
+    }
+
+    /* CV and Contact Sections */
+    #cv-contact-container {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 1rem; /* Maintain spacing between sections */
+    }
+    .cv-card, .contact-card {
+        max-width: 100%; /* Allow sections to take full width */
+        margin: 1rem 0; /* Adjust margins for vertical stacking */
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    /* Footer */
+    #footer {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Header */
+header {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+header:hover {
+    transform: scale(1.05); /* Slightly enlarge the header to appear as if coming forward */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
