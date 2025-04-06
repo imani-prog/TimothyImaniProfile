@@ -10,13 +10,13 @@
     <!-- Header Section -->
     <header>
         <nav>
-            <h1>Timothy Imani</h1>
+            <h1>TIMOTHY IMANI 😎💻</h1>
             <ul>
                 <!-- Navigation Links -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#cv">Download CV</a></li>
+                <li><a href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Theme Toggle Button -->
                 <li><button id="theme-toggle">🌙</button></li>
@@ -26,8 +26,14 @@
     
     <!-- Hero Section -->
     <section id="hero">
-        <h2>Hi, I'm Timothy Imani</h2>
-        <p>Database Administrator, Data Engineer, Web Developer</p>
+        <div class="hero-content">
+            <img src="./Assets/profile.jpg" alt="Profile Picture" class="profile-image">
+            <div class="hero-text">
+                <h2 id="greeting"></h2> <!-- Placeholder for dynamic greeting -->
+                <h2>I'm Timothy Imani</h2>
+                <p>A junior Database Administrator, Data Engineer, Web Developer</p>
+            </div>
+        </div>
     </section>
     
     <!-- About and Skills Section -->
@@ -52,7 +58,6 @@
             <ul>
                 <li>Web Development (HTML, CSS, JavaScript)</li>
                 <li>Database Administration (SQL Server, MySQL, Oracle)</li>
-                <li>Data Engineering & ETL</li>
                 <li>Programming languages (Python, Java, C++)</li>
                 <li>Tools and IDEs (Git, GitHub, VS Code, NetBeans, Code Blocks)</li>
                 <li>Data Analysis using Excel</li>
@@ -70,28 +75,31 @@
             <!-- Project 1 -->
             <div class="project-card">
                 <h3>Sample Data Importing Using Python</h3>
+                <img src="./Assets/background2.jpg" alt="Data Importing Project" class="project-image">
                 <p>Explore the project on <a href="https://github.com/imani-prog/data_importing.git" target="_blank">GitHub</a> or try the <a href="https://imani-prog-data-importing-dashboard-jhzokj.streamlit.app/" target="_blank">deployed app</a>.</p>
             </div>
             <!-- Project 2 -->
             <div class="project-card">
                 <h3>Watulivu Barber Shop</h3>
+                <img src="./Assets/watulivu.jpg" alt="Barber Shop Project" class="project-image">
                 <p>Visit the <a href="https://imani-prog.github.io/BarberShop/" target="_blank">live site</a> or check out the <a href="https://github.com/imani-prog/BarberShop.git" target="_blank">GitHub repository</a>.</p>
             </div>
             <!-- Project 3 -->
             <div class="project-card">
                 <h3>Dorca Hospital Management System</h3>
+                <img src="./Assets/background.jpg" alt="Hospital Management Project" class="project-image">
                 <p>Check out the <a href="https://github.com/imani-prog/DorcaHospitalManagementSystem.git" target="_blank">GitHub repository</a>.</p>
             </div>
         </div>
     </section>
 
-    <!-- CV and Contact Section -->
+    <!-- Career Objectives and Contact Section -->
     <section id="cv-contact-container">
-        <!-- CV Section -->
-        <div class="cv-card">
-            <h2>Download My CV</h2>
-            <iframe src="./Assets/Timothy_Imani_CV.pdf" class="cv-preview" title="CV Preview"></iframe>
-            <a href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a>
+        <!-- Career Objectives Section -->
+        <div class="career-objectives-card">
+            <h2>Career Objectives</h2>
+            <p>As an entry-level professional, I am eager to contribute to innovative projects, learn from experienced mentors, and grow my expertise in database administration, data engineering, and web development. My goal is to leverage my skills to build scalable, efficient, and impactful solutions that drive success for organizations.</p>
+            <p>I am passionate about solving complex problems, staying updated with industry trends, and continuously improving my technical and interpersonal skills. I am excited to collaborate with teams that value creativity, innovation, and a commitment to excellence.</p>
         </div>
         <!-- Contact Section -->
         <div class="contact-card">

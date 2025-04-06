@@ -12,16 +12,20 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    margin: 2rem; /* Updated margin to match the section below */
-    background: rgb(75, 2, 2);
-    color: white;
-    border-radius: 10px; /* Added border radius */
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    margin: 1.5rem; /* Match the margin of #about and #skills */
+    background: #e6e6e6; /* Match the background color of the #about section */
+    color: black; /* Match the text color of the #about section */
+    border-radius: 10px; /* Match the border radius of the #about section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+    border: 1px solid #ccc; /* Match the border of the #about section */
+    transition: background 0.6s, box-shadow 0.6s ease; /* Removed transform transition */
 }
 nav:hover {
-    background: rgb(100, 10, 10); /* Slightly lighter background on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow on hover */
-    cursor: pointer; /* Added pointer cursor */
+    background: antiquewhite; /* Maintain the hover background color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance the shadow effect */
+    cursor: pointer; /* Maintain pointer cursor */
+    margin-left: 50px;
+    margin-right: 50px;
 }
 nav ul {
     list-style: none;
@@ -29,47 +33,119 @@ nav ul {
     gap: 1rem;
 }
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 20px;
-    font-style: italic;
+    color: black; /* Match the text color of the #about section */
+    font-size: 18px; /* Match font size with #about */
+    font-style: italic; /* Match font style with #about */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, background 0.3s ease; /* Smooth transition for hover effects */
+    font-weight: bold; /* Increase font weight of nav links */
+    padding: 0.5rem 1rem; /* Add padding to create space for the hover box */
+    border-radius: 5px; /* Add rounded corners for the hover box */
 }
 nav ul li a:hover {
-    color: #ffcc00;
+    background: blue; /* Add a blue background on hover */
+    color: white; /* Change text color to white */
 }
 
 /* Hero Section */
 #hero {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 4rem 1rem;
-    margin: 2rem; /* Added margins all around */
+    padding: 3rem 1rem; /* Adjust padding for better alignment */
+    margin: 1.5rem; /* Maintain margin */
     color: black;
     font-size: 30px;
-    background: #e6e6e6; /* Set the hover color as the background color */
+    background: url('./Assets/background4.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the entire section */
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
+    transition: margin 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s ease;
 }
-#hero:hover {
-    transform: scale(1.05); /* Slightly enlarge the hero section to appear as if coming forward */
-    background: antiquewhite; /* Set the original background color as the hover color */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect */
-    cursor: pointer; /* Added pointer cursor */
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure equal spacing on both sides */
+    gap: 1rem; /* Adjust this value to control the spacing between the image and text flexbox */
+    padding-right: 10px; /* Reduce padding on the left and right */
+}
+
+.profile-image {
+    width: 320px; /* Increase width for a larger circular shape */
+    height: 320px; /* Set height equal to width for a perfect circle */
+    border-radius: 50%; /* Keep the image circular */
+    object-fit: cover; /* Ensure the image fills the circle without distortion */
+    object-position: top; /* Adjust position to ensure the full head is visible */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+    margin-left: 50px; /* Maintain spacing from the left */
+}
+
+.profile-image:hover {
+    transform: translateX(70px) scale(1.05); /* Move further to the right and zoom */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Maintain the prominent shadow effect */
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text to the left */
+    color: black; /* Set the text color to black */
+    height: 300px; /* Match the height of the image */
+    background: #e6e6e6; /* Add the same background color as the #about section */
+    border-radius: 10px; /* Match the rounded corners */
+    padding: 1rem; /* Adjust padding for balance */
+    flex: 1; /* Ensure this allows the text flexbox to take up the remaining space */
+    transition: transform 0.8s ease, opacity 0.8s ease, color 0.8s ease, background 0.8s ease, box-shadow 0.8s ease; /* Smooth transitions */
+    margin-left: 200px; /* Maintain initial position */
+    margin-right: 40px; /* Maintain spacing from the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+}
+
+.hero-text:hover {
+    transform: translateX(-70px) scale(1.05); /* Increase left movement distance */
+    opacity: 1; /* Ensure the text remains visible */
+    color: black; /* Ensure the text color remains black on hover */
+    background: antiquewhite; /* Maintain the hover background color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
+}
+
+.hero-text h2 {
+    margin-bottom: 1rem;
+    font-size: 36px; /* Adjust font size for the heading */
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 20px; /* Adjust font size for the paragraph */
+    line-height: 1.6;
 }
 
 #about-skills-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1rem; /* Reduced space between the sections */
-    margin: 2rem; /* Add margin around the container */
+    gap: 0.5rem; /* Reduced gap between sections */
+    margin: 1.5rem; /* Reduced margin */
+}
+
+#about, #skills, .project-card, .career-objectives-card, .contact-card {
+    background: #e6e6e6; /* Restore the original background color */
+    border-radius: 10px; /* Maintain the border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#about:hover, #skills:hover, .project-card:hover, .career-objectives-card:hover {
+    background: antiquewhite; /* Restore the hover background color */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+    transform: scale(1.05); /* Slightly zoom the flexbox */
+    cursor: pointer; /* Change the cursor to indicate interactivity */
 }
 
 #about {
@@ -80,19 +156,9 @@ nav ul li a:hover {
     align-items: flex-start;
     padding: 2rem;
     gap: 1rem;
-    background: #e6e6e6; /* Set the hover color as the background color */
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
     max-width: 450px; /* Increased size to reduce empty space */
-    margin: 2rem; /* Add margin for spacing */
-}
-#about:hover {
-    transform: scale(1.05); /* Slightly enlarge the section to appear as if coming forward */
-    background: antiquewhite; /* Maintain the hover background color */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    cursor: pointer; /* Added pointer cursor */
+    margin: 1.5rem; /* Reduced margin */
 }
 #about h2 {
     text-align: center; /* Center align the heading */
@@ -114,7 +180,7 @@ nav ul li a:hover {
 
 #skills {
     max-width: 450px; /* Match the max-width of the #about section */
-    margin: 2rem; /* Add consistent margin like #about */
+    margin: 1.5rem; /* Reduced margin */
     padding: 2rem; /* Add consistent padding like #about */
     flex: none; /* Prevent flex items from stretching */
     display: flex;
@@ -122,23 +188,13 @@ nav ul li a:hover {
     justify-content: center; /* Center align content vertically */
     align-items: center; /* Center align content horizontally */
     gap: 1rem;
-    background: #e6e6e6; /* Set the hover color as the background color */
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s ease; /* Smooth transition for hover effects */
     font-size: 18px; /* Match font size with #about */
     font-style: italic; /* Match font style with #about */
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
     line-height: 1.8; /* Match line height with #about */
     color: black; /* Match text color with #about */
     text-align: left; /* Match text alignment with #about */
-}
-#skills:hover {
-    transform: scale(1.05); /* Slightly enlarge the section to appear as if coming forward */
-    background: antiquewhite; /* Maintain the hover background color */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    cursor: pointer; /* Added pointer cursor */
 }
 #skills h2 {
     margin-bottom: 0.5rem; /* Reduce the space below the heading */
@@ -170,23 +226,29 @@ nav ul li a:hover {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
+    gap: 0.5rem; /* Reduced gap between project cards */
+    padding: 1.5rem; /* Reduced padding */
     text-align: center; /* Ensure all child elements, including h2, are centered */
 }
 .project-card {
-    background: #f4f4f4;
     padding: 1rem;
-    border-radius: 5px;
+    border-radius: 10px; /* Maintain the border radius */
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    margin: 0.5rem; /* Add spacing between project cards */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content horizontally */
+    gap: 1rem; /* Add spacing between elements */
 }
-.project-card:hover {
-    background: antiquewhite; /* Match hover background color with #about */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect with #about */
-    transform: scale(1.05); /* Slightly enlarge the card to appear as if coming forward */
-    cursor: pointer; /* Maintain pointer cursor */
+
+.project-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+
 .project-grid h2 {
     display: block; /* Ensure it behaves as a block element */
     margin: 0 auto; /* Center horizontally */
@@ -202,6 +264,7 @@ nav ul li a:hover {
     line-height: 1.8; /* Match line height with #about */
     color: black; /* Match text color with #about */
     text-align: left; /* Match text alignment with #about */
+    margin: 1.5rem; /* Reduced margin */
 }
 .project-title {
     display: flex; /* Use flexbox for alignment */
@@ -289,27 +352,84 @@ button:hover {
     cursor: pointer; /* Added pointer cursor */
 }
 
+.contact-card {
+    width: 50%; /* Fixed size covering half of the section */
+    float: right; /* Align to the right */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Maintain the border radius */
+    margin: 1.5rem; /* Reduced margin */
+    background: #e6e6e6; /* Match the background color of the career objectives flexbox */
+    border: 1px solid #ccc; /* Ensure consistent border style */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+}
+
+.contact-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    height: 150px; /* Fixed height */
+    resize: none; /* Disable resizing completely */
+    overflow-y: scroll; /* Force vertical scrollbars */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
 /* CV Section */
 #cv-contact-container {
     display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space out the CV and Contact sections */
+    justify-content: space-between; /* Space out the Career Objectives and Contact sections */
     align-items: flex-start; /* Align items at the top */
-    gap: 2rem; /* Add spacing between the sections */
-    padding: 2rem; /* Add padding around the container */
+    gap: 0.5rem; /* Reduced gap between the flexboxes */
+    padding: 1.5rem; /* Maintain reduced padding */
 }
 
 #cv-contact-container .cv-card, 
 #cv-contact-container .contact-card {
     max-width: 450px; /* Match the max-width of the #about section */
-    margin: 2rem; /* Add consistent margin like #about */
+    margin: 1.5rem; /* Reduced margin */
     padding: 2rem; /* Add consistent padding like #about */
     flex: none; /* Prevent flex items from stretching */
 }
 
 .cv-card, .contact-card {
-    background: #f4f4f4; /* Match the background color of project cards */
     text-align: center; /* Center-align the text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Match the shadow of project cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
@@ -334,14 +454,14 @@ button:hover {
 
 .cv-card:hover, .contact-card:hover {
     background: antiquewhite; /* Match hover background color with project cards */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Match hover shadow effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Restore the hover shadow effect */
     transform: scale(1.05); /* Slightly enlarge the card to appear as if coming forward */
     cursor: pointer; /* Change the cursor to a pointer */
 }
 
 .contact-card {
     max-width: 450px; /* Match the max-width of the .cv-card */
-    margin: 2rem; /* Add consistent margin like .cv-card */
+    margin: 1.5rem; /* Reduced margin */
     padding: 2rem; /* Add consistent padding like .cv-card */
     flex: none; /* Prevent flex items from stretching */
 }
@@ -354,6 +474,39 @@ button:hover {
     border-radius: 5px; /* Match the border radius of the card */
 }
 
+/* Career Objectives Section */
+.career-objectives-card {
+    flex: 1; /* Allow the section to take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    max-width: 450px; /* Match the size of the #about section */
+    margin: 1.5rem; /* Reduced margin */
+}
+
+.career-objectives-card h2 {
+    text-align: center; /* Center align the heading */
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Georgia", serif;
+    color: #333;
+    margin: 0;
+}
+
+.career-objectives-card p {
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.8;
+    color: black;
+    text-align: left;
+    margin: 0;
+}
+
 /* Footer */
 #footer {
     background: #f4f4f4; /* Match the background color of the contact section */
@@ -364,7 +517,7 @@ button:hover {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family */
     color: black; /* Match text color */
     border-top: 1px solid #ccc; /* Add a top border to separate the footer */
-    margin: 2rem; /* Match the margins of the hero section */
+    margin: 1.5rem; /* Reduced margin */
     border-radius: 10px; /* Match the border radius of the hero section */
 }
 
@@ -381,8 +534,8 @@ button:hover {
 
 /* Theme Toggle Button */
 #theme-toggle {
-    background: #ffcc00; /* Bright yellow background */
-    color: black; /* Black text for contrast */
+    background: black; /* Bright yellow background for light mode */
+    color: white; /* Black text for contrast */
     border: none; /* Remove default border */
     border-radius: 50%; /* Make it circular */
     padding: 0.5rem 1rem; /* Add padding for better appearance */
@@ -391,31 +544,71 @@ button:hover {
     transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-#theme-toggle:hover {
-    background: #ffa500; /* Slightly darker yellow on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Navbar */
     nav {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; /* Stack all elements vertically */
         align-items: center; /* Center-align items */
-        padding: 1rem; /* Adjust padding for smaller screens */
-    }
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 0.5rem; /* Reduce gap between links */
-    }
-    nav ul li a {
-        font-size: 18px; /* Reduce font size for smaller screens */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        margin: 0.2rem; /* Further reduce margin for smaller screens */
     }
 
-    /* Hero Section */
+    nav h1 {
+        display: inline-block; /* Ensure h1 and icon are inline */
+        font-size: 14px; /* Reduce font size for smaller screens */
+        margin: 0; /* Remove extra margin */
+    }
+
+    #theme-toggle {
+        display: inline-block; /* Ensure the icon is inline with h1 */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 0.3rem; /* Adjust padding for compactness */
+        margin-left: auto; /* Push the icon to the right */
+    }
+
+    nav ul {
+        flex-direction: row; /* Arrange navigation links horizontally */
+        gap: 0.5rem; /* Adjust spacing between links */
+        justify-content: flex-start; /* Align links to the left */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        margin-top: 0.5rem; /* Add spacing below h1 and icon */
+        width: 100%; /* Ensure the links span the full width */
+    }
+
+    nav ul li a {
+        font-size: 10px; /* Further reduce font size for smaller screens */
+        font-weight: 300; /* Reduce font weight for better fit */
+        padding: 0.1rem 0.3rem; /* Minimize padding for compact layout */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    #theme-toggle {
+        position: absolute; /* Position the icon absolutely */
+        top: 0.5rem; /* Position it near the top */
+        right: 1rem; /* Align it to the right corner */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 0.3rem; /* Adjust padding for compactness */
+    }
+
     #hero {
+        flex-direction: column; /* Stack image and text vertically */
         padding: 2rem 1rem; /* Reduce padding for smaller screens */
         font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    .hero-content {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 1rem; /* Maintain spacing between elements */
+    }
+    .profile-image {
+        width: 100%; /* Make the image take full width */
+        max-width: 250px; /* Limit the maximum width */
+        margin-left: 0; /* Remove left margin */
+    }
+    .hero-text {
+        margin-left: 0; /* Remove left margin */
+        height: auto; /* Allow height to adjust dynamically */
+        text-align: center; /* Center-align text */
     }
 
     /* About and Skills Sections */
@@ -432,6 +625,7 @@ button:hover {
     /* Projects Section */
     .project-grid {
         grid-template-columns: 1fr; /* Display one project per row */
+        gap: 1rem; /* Maintain spacing between project cards */
     }
 
     /* CV and Contact Sections */
@@ -445,10 +639,76 @@ button:hover {
         padding: 1.5rem; /* Reduce padding for smaller screens */
     }
 
+    /* Contact Form */
+    #contact-form {
+        width: 100%; /* Make the form take full width */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    #contact-form input,
+    #contact-form textarea {
+        width: 100%; /* Ensure inputs and textarea take full width */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    #contact-form button {
+        width: 100%; /* Make the button take full width */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    .contact-card {
+        width: 100%; /* Make the contact card take full width */
+        margin: 1rem 0; /* Adjust margins for vertical stacking */
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
     /* Footer */
     #footer {
         font-size: 14px; /* Reduce font size for smaller screens */
         padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    nav ul li a {
+        font-size: 16px; /* Further reduce font size */
+    }
+    #hero {
+        font-size: 20px; /* Further reduce font size */
+    }
+    .hero-text h2 {
+        font-size: 28px; /* Reduce heading size */
+    }
+    .hero-text p {
+        font-size: 16px; /* Reduce paragraph size */
+    }
+    #about h2, #skills h2 {
+        font-size: 20px; /* Reduce heading size */
+    }
+    #about p, #skills p {
+        font-size: 16px; /* Reduce paragraph size */
+    }
+    .project-card {
+        padding: 1rem; /* Reduce padding */
+    }
+    .project-card h3 {
+        font-size: 18px; /* Reduce font size */
+    }
+    .project-card p {
+        font-size: 14px; /* Reduce font size */
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 12px; /* Further reduce font size */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+    #contact-form button {
+        font-size: 12px; /* Further reduce font size */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+    .contact-card {
+        padding: 1rem; /* Further reduce padding */
+    }
+    #footer {
+        font-size: 12px; /* Further reduce font size */
     }
 }
 
