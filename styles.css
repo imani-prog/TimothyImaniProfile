@@ -75,19 +75,20 @@ nav ul li a:hover {
 }
 
 .profile-image {
-    width: 320px; /* Increase width for a larger circular shape */
-    height: 320px; /* Set height equal to width for a perfect circle */
+    width: 100%; /* Ensure the image takes full width of its container */
+    max-width: 250px; /* Limit the maximum width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Keep the image circular */
     object-fit: cover; /* Ensure the image fills the circle without distortion */
-    object-position: top; /* Adjust position to ensure the full head is visible */
+    object-position: center; /* Center the image within the circle */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
-    margin-left: 50px; /* Maintain spacing from the left */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .profile-image:hover {
-    transform: translateX(70px) scale(1.05); /* Move further to the right and zoom */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Maintain the prominent shadow effect */
+    transform: scale(1.05); /* Slightly zoom the image on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect on hover */
 }
 
 .hero-text {
@@ -242,11 +243,13 @@ nav ul li a:hover {
 }
 
 .project-image {
-    width: 100%; /* Make the image responsive */
-    max-width: 250px; /* Limit the maximum width */
+    width: 100%; /* Ensure the image is responsive */
+    max-width: 300px; /* Limit the maximum width for project images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add rounded corners */
+    object-fit: cover; /* Ensure the image fills its container without distortion */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .project-grid h2 {
@@ -601,9 +604,7 @@ button:hover {
         gap: 1rem; /* Maintain spacing between elements */
     }
     .profile-image {
-        width: 100%; /* Make the image take full width */
-        max-width: 250px; /* Limit the maximum width */
-        margin-left: 0; /* Remove left margin */
+        max-width: 200px; /* Reduce the size of the profile image on smaller screens */
     }
     .hero-text {
         margin-left: 0; /* Remove left margin */
@@ -668,6 +669,12 @@ button:hover {
 
 @media (max-width: 480px) {
     /* Further adjustments for very small screens */
+    .profile-image {
+        max-width: 150px; /* Further reduce the size of the profile image on very small screens */
+    }
+    .project-image {
+        max-width: 200px; /* Further reduce the size of project images on very small screens */
+    }
     nav ul li a {
         font-size: 16px; /* Further reduce font size */
     }
