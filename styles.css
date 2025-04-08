@@ -76,8 +76,8 @@ nav ul li a:hover {
 
 .profile-image {
     width: 100%; /* Ensure the image takes full width of its container */
-    max-width: 250px; /* Limit the maximum width for responsiveness */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit the maximum width for responsiveness */
+    height: 350px; /* Maintain aspect ratio */
     border-radius: 50%; /* Keep the image circular */
     object-fit: cover; /* Ensure the image fills the circle without distortion */
     object-position: center; /* Center the image within the circle */
@@ -87,7 +87,7 @@ nav ul li a:hover {
 }
 
 .profile-image:hover {
-    transform: scale(1.05); /* Slightly zoom the image on hover */
+    transform: translateX(80px); /* Slightly zoom the image on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect on hover */
 }
 
@@ -597,19 +597,28 @@ button:hover {
     #hero {
         flex-direction: column; /* Stack image and text vertically */
         padding: 2rem 1rem; /* Reduce padding for smaller screens */
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 20px; /* Adjust font size for smaller screens */
+        transform: none;
     }
     .hero-content {
         flex-direction: column; /* Stack image and text vertically */
         gap: 1rem; /* Maintain spacing between elements */
     }
     .profile-image {
-        max-width: 200px; /* Reduce the size of the profile image on smaller screens */
+        width: 100%; /* Ensure the image takes full width of its container */
+        max-width: 200px; /* Limit the maximum width for responsiveness */
+        height: auto; /* Maintain aspect ratio */
     }
     .hero-text {
         margin-left: 0; /* Remove left margin */
         height: auto; /* Allow height to adjust dynamically */
         text-align: center; /* Center-align text */
+        transform: none; /* Disable the transform effect on mobile responsiveness */
+        height: auto; /* Allow height to adjust dynamically */
+        padding: 1rem; /* Adjust padding for better fit */
+        margin: 0 1rem; /* Add margins to fit within the container */
+        overflow: hidden; /* Ensure no overflow of text */
+        transform: none; /* Disable the transform effect on mobile responsiveness */
     }
 
     /* About and Skills Sections */
