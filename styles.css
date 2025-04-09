@@ -3,29 +3,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background 0.3s, color 0.3s;
-}
 
+}
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    margin: 1.5rem; /* Match the margin of #about and #skills */
+    padding: 1rem 2rem; /* Ensure consistent padding */
     background: #e6e6e6; /* Match the background color of the #about section */
     color: black; /* Match the text color of the #about section */
     border-radius: 10px; /* Match the border radius of the #about section */
+    position: relative; /* Use relative position */
+    top: 0; /* Ensure it starts at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    max-width: 100%; /* Ensure it does not exceed the viewport width */
+    z-index: 1000; /* Ensure it stays above other elements */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
     border: 1px solid #ccc; /* Match the border of the #about section */
-    transition: background 0.6s, box-shadow 0.6s ease; /* Removed transform transition */
-}
-nav:hover {
-    background: antiquewhite; /* Maintain the hover background color */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance the shadow effect */
-    cursor: pointer; /* Maintain pointer cursor */
-    margin-left: 50px;
-    margin-right: 50px;
+    overflow: hidden;
 }
 nav ul {
     list-style: none;
@@ -34,7 +32,7 @@ nav ul {
 }
 nav ul li a {
     color: black; /* Match the text color of the #about section */
-    font-size: 18px; /* Match font size with #about */
+    font-size: 15px; /* Match font size with #about */
     font-style: italic; /* Match font style with #about */
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
     text-decoration: none; /* Remove underline */
