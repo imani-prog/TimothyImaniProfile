@@ -3,67 +3,84 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
 }
 /* Navbar */
 nav {
+    position: relative; /* Keeps navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* On top of other elements */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem; /* Ensure consistent padding */
-    background: #e6e6e6; /* Match the background color of the #about section */
-    color: black; /* Match the text color of the #about section */
-    border-radius: 10px; /* Match the border radius of the #about section */
-    position: relative; /* Use relative position */
-    top: 0; /* Ensure it starts at the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Ensure it spans the full width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    max-width: 100%; /* Ensure it does not exceed the viewport width */
-    z-index: 1000; /* Ensure it stays above other elements */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
-    border: 1px solid #ccc; /* Match the border of the #about section */
+    padding: 1rem 2rem;
+
+    background: #e6e6e6;
+    color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+    border: 1px solid #ccc;
     overflow: hidden;
+    margin-bottom: 0px;
 }
+nav :hover{
+    margin: 0rem;
+    padding-bottom: 0px;
+    border: outline
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
-}
-nav ul li a {
-    color: black; /* Match the text color of the #about section */
-    font-size: 15px; /* Match font size with #about */
-    font-style: italic; /* Match font style with #about */
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease, background 0.3s ease; /* Smooth transition for hover effects */
-    font-weight: bold; /* Increase font weight of nav links */
-    padding: 0.5rem 1rem; /* Add padding to create space for the hover box */
-    border-radius: 5px; /* Add rounded corners for the hover box */
-}
-nav ul li a:hover {
-    background: blue; /* Add a blue background on hover */
-    color: white; /* Change text color to white */
+    margin: 0;
+    padding: 0;
 }
 
+nav ul li a {
+    color: black;
+    font-size: 15px;
+    font-style: italic;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-decoration: none;
+    font-weight: bold;
+
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Ensure consistent padding */
+    border-radius: 5px;
+
+    background-color: transparent;
+    border: 2px solid transparent; /* Reserve space for border if needed */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: blue;
+    color: white;
+}
 /* Hero Section */
 #hero {
     display: flex;
     align-items: center;
     padding: 3rem 1rem; /* Adjust padding for better alignment */
-    margin: 1.5rem; /* Maintain margin */
+    margin: 5rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
     color: black;
     font-size: 30px;
-    background: url('./Assets/background4.jpg') no-repeat center center; /* Background image */
-    background-size: cover; /* Ensure the image covers the entire section */
+    background: url('./Assets/background4.jpg') no-repeat center center;
+    background-size: cover;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: margin 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    margin-top: 25px;
 }
-
 .hero-content {
     display: flex;
     align-items: center;
@@ -71,7 +88,6 @@ nav ul li a:hover {
     gap: 1rem; /* Adjust this value to control the spacing between the image and text flexbox */
     padding-right: 10px; /* Reduce padding on the left and right */
 }
-
 .profile-image {
     width: 100%; /* Ensure the image takes full width of its container */
     max-width: 300px; /* Limit the maximum width for responsiveness */
@@ -194,6 +210,7 @@ nav ul li a:hover {
     line-height: 1.8; /* Match line height with #about */
     color: black; /* Match text color with #about */
     text-align: left; /* Match text alignment with #about */
+    padding-top: 10px;
 }
 #skills h2 {
     margin-bottom: 0.5rem; /* Reduce the space below the heading */
@@ -205,6 +222,7 @@ nav ul li a:hover {
     padding: 1rem;
     justify-content: center; /* Center align the skills */
     margin-top: 0; /* Remove any additional margin above the list */
+    padding-top: 0px;
 }
 #skills li {
     background: #eee;
@@ -354,7 +372,7 @@ button:hover {
 }
 
 .contact-card {
-    width: 50%; /* Fixed size covering half of the section */
+    width: 800px; /* Fixed size covering half of the section */
     float: right; /* Align to the right */
     padding: 20px;
     box-sizing: border-box;
@@ -417,7 +435,7 @@ button:hover {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space out the Career Objectives and Contact sections */
     align-items: flex-start; /* Align items at the top */
-    gap: 0.5rem; /* Reduced gap between the flexboxes */
+    gap: 0.01rem; /* Reduced gap between the flexboxes */
     padding: 1.5rem; /* Maintain reduced padding */
 }
 
