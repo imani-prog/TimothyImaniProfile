@@ -26,4 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
         themeToggle.textContent = isDarkMode ? "☀" : "☾";
         localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     });
+
+    // Typing effect on .input span inside the <p>
+    var typed = new Typed(".input", {
+        strings: ["Database Administrator", "Data Engineer", "Web Developer","Microsoft Excel Data Analyst"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
 });
