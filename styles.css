@@ -3,87 +3,83 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 0; 
 }
 /* Navbar */
 nav {
-    position: relative; /* Keeps navbar at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* On top of other elements */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 70;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  cursor:pointer;
 
-    background: #e6e6e6;
-    color: black;
-    border-radius: 10px;
-    box-sizing: border-box;
-    max-width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-    border: 1px solid #ccc;
-    overflow: hidden;
-    margin-bottom: 0px;
-}
-nav :hover{
-    margin: 0rem;
-    padding-bottom: 0px;
-    border: outline
+  background: #e6e6e6;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-    color: black;
-    font-size: 15px;
-    font-style: italic;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    text-decoration: none;
-    font-weight: bold;
+  color: black;
+  font-size: 15px;
+  font-style: italic;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  text-decoration: none;
+  font-weight: bold;
 
-    display: inline-block;
-    padding: 0.5rem 1rem; /* Ensure consistent padding */
-    border-radius: 5px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-sizing: border-box;
 
-    background-color: transparent;
-    border: 2px solid transparent; /* Reserve space for border if needed */
-    box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: blue;
-    color: white;
+   will-change: background-color, color;
+  color: black;
+  border: 2px solid blue;
 }
+
 /* Hero Section */
 #hero {
     display: flex;
     align-items: center;
     padding: 3rem 1rem; /* Adjust padding for better alignment */
-    margin: 5rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
+    margin: 10rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
     color: black;
     font-size: 30px;
-    background: url('./Assets/background4.jpg') no-repeat center center;
     background-size: cover;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: margin 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s ease;
+     transition: margin 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s ease; 
     margin-top: 25px;
 }
 .hero-content {
     display: flex;
     align-items: center;
+    margin-top: 5rem;
     justify-content: space-between; /* Ensure equal spacing on both sides */
     gap: 1rem; /* Adjust this value to control the spacing between the image and text flexbox */
     padding-right: 10px; /* Reduce padding on the left and right */
@@ -153,7 +149,7 @@ nav ul li a:hover {
     background: #e6e6e6; /* Restore the original background color */
     border-radius: 10px; /* Maintain the border radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
 }
 
 #about:hover, #skills:hover, .project-card:hover, .career-objectives-card:hover {
@@ -658,6 +654,7 @@ button:hover {
     #cv-contact-container {
         flex-direction: column; /* Stack sections vertically */
         gap: 1rem; /* Maintain spacing between sections */
+        padding: 0 1rem; /* Adds 1rem padding left and right */
     }
     .cv-card, .contact-card {
         max-width: 100%; /* Allow sections to take full width */
@@ -668,7 +665,7 @@ button:hover {
     /* Contact Form */
     #contact-form {
         width: 100%; /* Make the form take full width */
-        padding: 1rem; /* Adjust padding for smaller screens */
+        padding: 1rem /* Adjust padding for smaller screens */
     }
     #contact-form input,
     #contact-form textarea {
@@ -681,7 +678,7 @@ button:hover {
     }
     .contact-card {
         width: 100%; /* Make the contact card take full width */
-        margin: 1rem 0; /* Adjust margins for vertical stacking */
+        margin: 1rem; /* Adjust margins for vertical stacking */
         padding: 1.5rem; /* Reduce padding for smaller screens */
     }
 
@@ -745,12 +742,14 @@ button:hover {
 }
 
 /* Header */
-header {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-}
+header { 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+     padding-top: 90px;  /* Smooth transition for hover effects */
+ } 
 
-header:hover {
-    transform: scale(1.05); /* Slightly enlarge the header to appear as if coming forward */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
-    cursor: pointer; /* Change the cursor to a pointer */
-}
+ header:hover { 
+     /* transform: scale(0.55);  *//* Slightly enlarge the header to appear as if coming forward */
+     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
+    cursor: pointer;  /* Change the cursor to a pointer */
+ }
+
