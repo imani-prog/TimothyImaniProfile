@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Timothy Imani | Portfolio</title>
         <link rel="stylesheet" href="./styles.css">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <style>
           html {
             scroll-behavior: smooth;
@@ -32,9 +33,9 @@
     </body>
     
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" data-aos="zoom-in">
         <div class="hero-content">
-            <img src="./Assets/profile1.jpg" alt="Profile Picture" class="profile-image">
+            <img src="./Assets/profile1.jpg" alt="Profile Picture" class="profile-image" data-aos="flip-right" data-aos-delay="100">
             <div class="hero-text">
                 <h2 id="greeting"></h2> <!-- Placeholder for dynamic greeting -->
                 <h2>I'm <span>Timothy Imani</span></h2>
@@ -43,10 +44,9 @@
         </div>
     </section>
     
-    <!-- About and Skills Section -->
     <div id="about-skills-container">
         <!-- About Section -->
-        <section id="about">
+        <section id="about" data-aos="zoom-in">
             <h2>About Me</h2>
             <p>As an aspiring Database Administrator (DBA) with a strong interest in
                 Data Engineering and Web Development,<br> I am passionate about managing
@@ -56,24 +56,25 @@
                 I enjoy solving complex problems, improving system efficiency,
                 and staying up-to-date with industry trends. Every challenge is an
                 opportunity to grow, and I’m excited to build impactful solutions that
-                 drive efficiency and innovation.</p>
+                drive efficiency and innovation.</p>
         </section>
-
+    
         <!-- Skills Section -->
-        <section id="skills">
+        <section id="skills" data-aos="zoom-in">
             <h2>Skills</h2>
             <ul>
                 <li>Web Development (HTML, CSS, JavaScript)</li>
-                <li>Database Administration (SQL Server, MySQL,PostgreSQL)</li>
+                <li>Database Administration (SQL Server, MySQL, PostgreSQL)</li>
                 <li>Programming languages (Python, SQL, Java, C++)</li>
                 <li>Tools and IDEs (Git, GitHub, VS Code, Code Blocks)</li>
                 <li>Data Analysis using Excel</li>
             </ul>
         </section>
     </div>
+    
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" data-aos="zoom-in">
         <div class="project-title">
             <h2>Sample Projects</h2>
             <p>These are some of the projects I’ve worked on as a junior, where I applied my skills in database management, data engineering, and web development. I have experience in automating data workflows, building interactive systems, and creating responsive websites that offer seamless user experiences, all while ensuring efficient back-end processes and smooth integration with databases.</p>
@@ -101,7 +102,7 @@
     </section>
 
     <!-- Career Objectives and Contact Section -->
-    <section id="cv-contact-container">
+    <section id="cv-contact-container"  data-aos="zoom-in">
         <!-- Career Objectives Section -->
         <div class="career-objectives-card">
             <h2>Career Objectives</h2>
@@ -122,12 +123,27 @@
 
     <!-- Footer Section -->
     <footer id="footer">
-        <p>Email: <a href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/imani-prog" target="_blank">github.com/imani-prog</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">www.linkedin.com/in/timothy-imani-5677ba253</a></p>
-        <p>Phone Number: <a href="tel:+254743669252">+254743669252</a></p>
+        <div class="footer-contacts">
+          <p>Email: <a href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/imani-prog" target="_blank">github.com/imani-prog</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">www.linkedin.com/in/timothy-imani-5677ba253</a></p>
+          <p>Phone Number: <a href="tel:+254743669252">+254743669252</a></p>
+        </div>
+        <div class="footer-back-to-top">
+          <button id="backToTop" title="Back to Top">Back to Top</button>
+        </div>
         <p>&copy; 2025 Timothy Imani. <br> All rights reserved.</p>
-    </footer>
+      </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(
+    {
+        duration: 1000, // Slow down to 2 seconds (default is 400ms)
+        once: false,     // Only animate once
+        mirror: true,
+      }
+  );
+</script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./script.js"></script>
 </body>
