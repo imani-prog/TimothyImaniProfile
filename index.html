@@ -6,6 +6,7 @@
         <title>Timothy Imani | Portfolio</title>
         <link rel="stylesheet" href="./styles.css">
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Z73pGkF9p3e6p2Q6p4p5p6p" crossorigin="anonymous">
         <style>
           html {
             scroll-behavior: smooth;
@@ -31,7 +32,8 @@
             </nav>
         </header>
     </body>
-    
+    <div class="star-container" id="starContainer"></div>
+
     <!-- Hero Section -->
     <section id="hero" data-aos="zoom-in">
         <div class="hero-content">
@@ -153,17 +155,36 @@
 
     <!-- Footer Section -->
     <footer id="footer">
-        <div class="footer-contacts">
-          <p>Email: <a href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a></p>
-          <p>GitHub: <a href="https://github.com/imani-prog" target="_blank">github.com/imani-prog</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">www.linkedin.com/in/timothy-imani-5677ba253</a></p>
-          <p>Phone Number: <a href="tel:+254743669252">+254743669252</a></p>
+      <div class="footer-contacts">
+        <!-- Footer icons -->
+        <div class="footer-icons">
+          <a href="mailto:timothyimani6@gmail.com" target="_blank" title="Email">
+            <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="footer-icon">
+          </a>
+          
+          <a href="https://github.com/imani-prog" target="_blank" title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Icon" class="footer-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank" title="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="footer-icon">
+          </a>
+          <a href="https://wa.me/254743669252" target="_blank" title="WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="footer-icon">
+          </a>
         </div>
-        <div class="footer-back-to-top">
-          <button id="backToTop" title="Back to Top">Back to Top</button>
-        </div>
-        <p>&copy; 2025 Timothy Imani. <br> All rights reserved.</p>
-      </footer>
+    
+        <!-- Keep the phone number as originally structured -->
+        <p>Call or SMS: <a href="tel:+254743669252">+254743669252</a></p>
+      </div>
+    
+      <div class="footer-back-to-top">
+        <button id="backToTop" title="Back to Top">Back to Top</button>
+      </div>
+    <hr>
+      <p>&copy; 2025 Timothy Imani.  All rights reserved.</p>
+    </footer>
+    
+    
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init(
