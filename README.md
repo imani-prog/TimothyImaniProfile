@@ -1,6 +1,6 @@
 # Timothy Imani | Portfolio
 
-Welcome to the official portfolio of **Timothy Imani**. This project showcases my skills, projects, and professional journey as a **Database Administrator**, **Data Engineer**, and **Web Developer**.
+Welcome to my official portfolio . This project showcases my skills, projects, and professional journey as a **Database Administrator**, **Data Engineer**, and **Web Developer**.
 
 ## 🌟 Features
 
