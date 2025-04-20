@@ -1,3 +1,18 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "ImaniPortfolio"
-}
+    "liveServer.settings.multiRootWorkspaceName": "ImaniPortfolio",
+    "liveServer.settings.port": 5501,
+
+    
+        "files.exclude": {
+          "**/node_modules": true,
+          "**/.git": true,
+          "**/build": true
+        },
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/build": true
+        }
+      }
+      
+
+

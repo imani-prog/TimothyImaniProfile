@@ -17,14 +17,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   cursor:pointer;
-
   background: #e6e6e6;
   color: black;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 nav h1{
@@ -65,20 +61,13 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    display: flex;
     align-items: center;
     padding: 3rem 1rem; /* Adjust padding for better alignment */
     margin: 10rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
     color: black;
     font-size: 30px;
-    background-color: #F0F2F5;;
-    background-size: cover;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: margin 0.3s, background 0.3s, box-shadow 0.3s, transform 0.3s ease; 
     margin-top: 25px;
     padding-top: 0.5px; /* Reduce this value */
     padding-bottom: 50px;
@@ -312,14 +301,14 @@ nav ul li a:hover {
     margin: 1.5rem; /* Reduced margin */
 }
 
-#about, #skills, .project-card, .career-objectives-card, .contact-card {
+#skills, .project-card, .career-objectives-card, .contact-card {
     background: #e6e6e6; /* Restore the original background color */
     border-radius: 10px; /* Maintain the border radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
     transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
 }
 
-#about:hover, #skills:hover, .project-card:hover, .career-objectives-card:hover {
+#skills:hover, .project-card:hover, .career-objectives-card:hover {
     background: antiquewhite; /* Restore the hover background color */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
     transform: scale(1.05); /* Slightly zoom the flexbox */
@@ -328,13 +317,11 @@ nav ul li a:hover {
 
 #about {
     flex: 1; /* Allow the about section to take up available space */
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 2rem;
     gap: 1rem;
-    border: 1px solid #ccc;
     max-width: 450px; /* Increased size to reduce empty space */
     margin: 1.5rem; /* Reduced margin */
 }
@@ -343,8 +330,32 @@ nav ul li a:hover {
     font-size: 24px;
     font-style: italic;
     font-family: "Georgia", serif;
-    color:blue;
+    color: blue;
     margin: 0;
+}
+
+#about {
+    flex: 1; /* Allow the about section to take up available space */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    max-width: 450px; /* Increased size to reduce empty space */
+    margin: 1.5rem; /* Reduced margin */
+    display: flex;
+    position: relative; /* Enable positioning for the image */
+}
+
+
+
+#skills {
+    margin-top: 2rem; /* Move the skills section downwards */
+    background-size: cover; /* Ensure the image covers the entire section */
+    height: auto; /* Adjust height dynamically */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
 #about p {
     font-size: 18px;
@@ -1110,36 +1121,6 @@ header {
   
     .tools-track img {
       height: 35px;
-    }
-  }
-  
-  .star-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    overflow: hidden;
-  }
-  
-  .star {
-    position: absolute;
-    top: 0;
-    animation: fall linear forwards;
-    opacity: 0.9;
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)); /* subtle glowing effect */
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(0) scale(1) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) scale(0.8) rotate(360deg);
-      opacity: 0;
     }
   }
   
