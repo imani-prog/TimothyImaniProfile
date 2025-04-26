@@ -6,6 +6,8 @@ body {
     padding-top: 0;
     overflow-x: hidden;
 }
+
+
 /* Navbar */
 nav {
   position: fixed; 
@@ -25,7 +27,7 @@ nav {
 }
 nav h1{
     color: blue;
-    font-style: italic;
+    font-style: none;
 }
 nav ul {
   list-style: none;
@@ -38,7 +40,6 @@ nav ul {
 nav ul li a {
   color: black;
   font-size: 15px;
-  font-style: italic;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   text-decoration: none;
   font-weight: bold;
@@ -66,8 +67,7 @@ nav ul li a:hover {
     margin: 10rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
     color: black;
     font-size: 30px;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal !important;
     margin-top: 25px;
     padding-top: 0.5px; /* Reduce this value */
     padding-bottom: 50px;
@@ -114,6 +114,7 @@ nav ul li a:hover {
 .hero-text {
     display: flex;
     flex-direction: column;
+    font-style: normal !important;
     justify-content: center;
     text-align: left; /* Align text to the left */
     color: black; /* Set the text color to black */
@@ -140,9 +141,11 @@ nav ul li a:hover {
     margin-bottom: 1rem;
     font-size: 36px; /* Adjust font size for the heading */
     font-weight: bold;
+    font-style: normal !important;
 }
 .hero-text span{
     color: blue;
+    font-style: normal !important;
 }
 .hero-text p {
     font-size: 20px; /* Adjust font size for the paragraph */
@@ -159,7 +162,7 @@ nav ul li a:hover {
 
 .input {
     display: inline-block; /* Keeps it inline, but allows width control */
-    min-width: 400px;       /* Prevents jumping as text changes */
+    min-width: 10px;       /* Prevents jumping as text changes */
     font-size: 1.2rem;      /* Matches text size */
     font-weight: bold;
     color: inherit;
@@ -273,7 +276,7 @@ nav ul li a:hover {
     }
   }
   
-  /* Optional glitter overlay */
+  /*  glitter overlay */
   #greeting::after {
     content: '';
     position: absolute;
@@ -291,24 +294,14 @@ nav ul li a:hover {
   }
   
 
-
-
-#about-skills-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.5rem; /* Reduced gap between sections */
-    margin: 1.5rem; /* Reduced margin */
-}
-
-#skills, .project-card, .career-objectives-card, .contact-card {
+.project-card, .career-objectives-card, .contact-card {
     background: #e6e6e6; /* Restore the original background color */
     border-radius: 10px; /* Maintain the border radius */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
     transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
 }
 
-#skills:hover, .project-card:hover, .career-objectives-card:hover {
+.project-card:hover, .career-objectives-card:hover {
     background: antiquewhite; /* Restore the hover background color */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
     transform: scale(1.05); /* Slightly zoom the flexbox */
@@ -323,15 +316,14 @@ nav ul li a:hover {
     padding: 2rem;
     gap: 1rem;
     max-width: 450px; /* Increased size to reduce empty space */
-    margin: 1.5rem; /* Reduced margin */
+    margin: 1.5rem;
+    font-style: normal !important;
 }
 #about h2 {
     text-align: center; /* Center align the heading */
     font-size: 24px;
-    font-style: italic;
-    font-family: "Georgia", serif;
-    color: blue;
     margin: 0;
+    font-style: normal !important;
 }
 
 #about {
@@ -344,22 +336,24 @@ nav ul li a:hover {
     max-width: 450px; /* Increased size to reduce empty space */
     margin: 1.5rem; /* Reduced margin */
     display: flex;
+    margin-left: 150px;
     position: relative; /* Enable positioning for the image */
 }
 
-
-
-#skills {
-    margin-top: 2rem; /* Move the skills section downwards */
-    background-size: cover; /* Ensure the image covers the entire section */
-    height: auto; /* Adjust height dynamically */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+/* Light mode styles for the #about section */
+body:not(.dark-mode) #about h2,
+body:not(.dark-mode) #about p {
+    color: black; /* Dark text for light background */
 }
+
+/* Dark mode styles for the #about section */
+body.dark-mode #about h2,
+body.dark-mode #about p {
+    color: #fff; /* White text for dark background */
+}
+
 #about p {
     font-size: 18px;
-    font-style: italic;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     line-height: 1.8;
     color: black;
@@ -367,52 +361,228 @@ nav ul li a:hover {
     margin: 0;
 }
 
-#skills {
-    max-width: 450px; /* Match the max-width of the #about section */
-    margin: 1.5rem; /* Reduced margin */
-    padding: 2rem; /* Add consistent padding like #about */
-    flex: none; /* Prevent flex items from stretching */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center align content vertically */
-    align-items: center; /* Center align content horizontally */
-    gap: 1rem;
-    border: 1px solid #ccc;
-    font-size: 18px; /* Match font size with #about */
-    font-style: italic; /* Match font style with #about */
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
-    line-height: 1.8; /* Match line height with #about */
-    color: black; /* Match text color with #about */
-    text-align: left; /* Match text alignment with #about */
-    padding-top: 10px;
+/* Styling for the About Me section */
+#about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
 }
-#skills h2 {
-    margin-bottom: 0.5rem; /* Reduce the space below the heading */
-    color:blue;
+
+/* Styling for the motivational quote */
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    border-left: 4px solid #007BFF; /* Accent color for the quote */
 }
-#skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: center; /* Center align the skills */
-    margin-top: 0; /* Remove any additional margin above the list */
-    padding-top: 0px;
+
+.quote footer {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: black;
 }
-#skills li {
-    background: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: "Arial", sans-serif;
+/* Light mode styles for the quote */
+body:not(.dark-mode) .quote {
+    color: black;
+}
+
+body:not(.dark-mode) .quote footer {
+    color: black;
+}
+
+/* Dark mode styles for the quote */
+body.dark-mode .quote {
+    color: white;
+}
+
+body.dark-mode .quote footer {
+    color: white;
+}
+
+/* Main skills container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-top: 20px;
+  }
+  
+  /* Individual skill section */
+  .skills-section {
+    display: flex; /* Flexbox for vertical alignment inside each section */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content horizontally */
+    text-align: center; /* Center-align text */
+    background-color: #F0F2F5; /* Light background color */
+    padding: 20px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    max-width: 300px; /* Limit the width of each section */
+    width: 100%; /* Ensure the section takes full available space within the grid cell */
+  }
+  
+  .skills-section:hover{
+    background: antiquewhite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  /* Skill title */
+  .skills-section h3 {
+    font-size: 1.2em; /* Slightly larger font size for the title */
+    margin-bottom: 10px; /* Space between title and description */
+    color: #0000ff; /* Blue color for the title */
+  }
+  
+  /* Skill list */
+  .skills-section ul {
+    list-style-type: none; /* Use bullet points for the list */
+    padding-left: 20px; /* Indent the list */
+    margin: 0; /* Remove default margins */
+  }
+  
+  /* Skill list items */
+  .skills-section li {
+    font-size: 20px; /* Smaller font size for the list items */
+    color: black; /* Grayish color for the list items */
+  }
+  
+  /* Style for the h2 element */
+  h2 {
+    text-align: center; /* Center align the text */
+    font-size: 30px; /* Set the font size to 20px */
+    margin-bottom: 20px; /* Add some spacing below the heading */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: bold;
+
+  }
+
+
+  /* Icons */
+.skill-icon {
+    height: 40px; /* Set a consistent height for all icons */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add spacing between icons and the title */
+  }
+
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr; /* Only one column on small screens */
+      margin-left: 20px; /* Smaller margins */
+      margin-right: 20px;
+      gap: 20px; /* Reduce gap a little for small screens */
+      padding-top: 20px;
+      box-sizing: border-box; /* Prevent overflow */
+    }
+  
+    .skills-section {
+      max-width: 100%; /* Full width inside grid */
+    }
+    
+    .skills-section ul {
+      padding-left: 10px; /* Reduce padding for list */
+    }
+  }
+
+ /* Education section design */
+h2 {
     text-align: center;
-    transition: transform 0.3s, background 0.3s;
-}
-#skills li:hover {
-    background: #ddd;
-    transform: scale(1.05);
-    cursor: pointer; /* Added pointer cursor */
-}
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+  
+  #education {
+    max-width: 1200px; /* Adjusted to fit all items */
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+
+  }
+  
+  .education-container {
+    display: flex; /* Flex container for horizontal layout */
+    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure all items stay in one line */
+  }
+  
+  .education-item {
+    display: flex; /* Each item is a flex container */
+    flex-direction: column; /* Stack icon and details vertically */
+    align-items: center; /* Center-align content horizontally */
+    gap: 10px;
+    width: 25%;
+    padding: 15px;
+    background-color: #F0F2F5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-item:hover {
+    background: antiquewhite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+    transform: scale(1.02);
+    cursor: pointer;
+    
+  }
+  
+  .education-item i {
+    font-size: 40px; /* Icon size */
+    color: #1a82f1; /* Icon color */
+  }
+  
+  .education-details h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: blue;
+    text-align: center; /* Center-align the title */
+  }
+  
+  .education-details .institution {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    text-align: center; /* Center-align the institution name */
+  }
+  
+  .education-details .years {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+    text-align: center; /* Center-align the years */
+  }
+  @media (max-width: 768px) {
+    #education {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .education-container {
+      flex-wrap: wrap; /* Allow wrapping on small screens */
+      justify-content: center; /* Center items if wrapping */
+      gap: 20px; /* Optional: add gap between wrapped items */
+    }
+  
+    .education-item {
+      width: 100%; /* Full width on small screens */
+      max-width: 300px; /* Limit width to avoid too stretched look */
+    }
+  }
+
 
 /* Project Grid */
 .project-grid {
@@ -423,7 +593,7 @@ nav ul li a:hover {
     text-align: center; /* Ensure all child elements, including h2, are centered */
 }
 .project-card {
-    padding: 1rem;
+    padding: 0px;
     border-radius: 10px; /* Maintain the border radius */
     text-align: center;
     margin: 0.5rem; /* Add spacing between project cards */
@@ -435,7 +605,7 @@ nav ul li a:hover {
 
 .project-image {
     width: 100%; /* Ensure the image is responsive */
-    max-width: 300px; /* Limit the maximum width for project images */
+    max-width: 200px; /* Limit the maximum width for project images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add rounded corners */
     object-fit: cover; /* Ensure the image fills its container without distortion */
@@ -453,85 +623,91 @@ nav ul li a:hover {
 /* Projects Section */
 #projects {
     font-size: 18px; /* Match font size with #about */
-    font-style: italic; /* Match font style with #about */
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
     line-height: 1.8; /* Match line height with #about */
     color: black; /* Match text color with #about */
     text-align: left; /* Match text alignment with #about */
-    margin: 1.5rem; /* Reduced margin */
+    padding-top: 40px;
+    font-style: normal !important;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
 }
-.project-title {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Ensure text alignment */
-    margin: 1rem auto; /* Center the section and add spacing */
-    background-color: #F0F2F5;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-}
-.project-title:hover{
-    background: antiquewhite;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-    transform: scale(1.02);
-}
+
 .project-title h2 {
     margin-bottom: 0.5rem; /* Add spacing below the heading */
     text-align: center; /* Center-align the heading */
-    color:blue !important;
-}
-.project-title p {
-    text-align: center; /* Center-align the text */
-    margin: 0.5rem auto; /* Add spacing and center horizontally */
-    font-size: 16px; /* Set a readable font size */
-    line-height: 1.6; /* Improve readability */
-    color: #555; /* Set a subtle text color */
-    max-width: 600px; /* Limit the width of the text */
 }
 .project-title h2 {
     font-size: 30px; /* Match heading font size with #about h2 */
-    font-style: italic; /* Match heading font style */
     font-family: "Georgia", serif; /* Match heading font family */
-    color: blue;
 }
 .project-title p {
     font-size: 18px; /* Match paragraph font size with #about p */
-    font-style: italic; /* Match paragraph font style */
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
-    line-height: 1.8; /* Match paragraph line height */
+    line-height: 1.3; /* Match paragraph line height */
     color: black; /* Match paragraph text color */
-}
-.project-title h2, .project-title p {
-    transition: color 0.3s ease; /* Smooth transition for color changes */
-    color:blue;
+    text-align: center;
 }
 
 body:not(.dark-mode) .project-title h2, 
 body:not(.dark-mode) .project-title p {
-    color: #333; /* Dark text for light mode */
+    color: black; /* Dark text for light mode */
 }
 
 body.dark-mode .project-title h2, 
 body.dark-mode .project-title p {
-    color: black; /* Light text for dark mode */
+    color: white; /* Light text for dark mode */
 }
 .project-card h3 {
     font-size: 20px; /* Adjust font size for project titles */
-    font-style: italic; /* Match font style */
     font-family: "Georgia", serif; /* Match font family */
     color:blue;
 }
 .project-card p {
     font-size: 18px; /* Match paragraph font size */
-    font-style: italic; /* Match paragraph font style */
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
     line-height: 1.8; /* Match paragraph line height */
     color: black; /* Match paragraph text color */
 }
+
+@media (max-width: 768px) {
+    #projects {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-top: 20px;
+      font-size: 16px; /* Slightly smaller font for better fit */
+      line-height: 1.6; /* Tighten line height slightly */
+      text-align: center; /* Center text on mobile for better appearance */
+    }
+  
+    .project-grid {
+      grid-template-columns: 1fr; /* Stack project cards vertically */
+      padding: 1rem; /* Slightly reduced padding */
+      gap: 1rem; /* More breathing space between cards */
+    }
+  
+    .project-card {
+      margin: 0 auto; /* Center each card */
+      width: 100%;
+      max-width: 300px; /* Limit card width on small devices */
+    }
+  
+    .project-title h2 {
+      font-size: 24px; /* Slightly smaller heading */
+    }
+  
+    .project-title p {
+      font-size: 16px; /* Smaller paragraph font */
+      line-height: 1.6;
+      padding: 0 10px; /* Add side padding inside */
+    }
+  
+    .project-image {
+      max-width: 100%; /* Let image be responsive inside card */
+      height: auto;
+    }
+  }
 
 /* Contact Form */
 form {
@@ -643,7 +819,6 @@ button:hover {
 
 .cv-card h2, .contact-card h2 {
     font-size: 20px; /* Match font size with project card titles */
-    font-style: italic; /* Match font style */
     font-family: "Georgia", serif; /* Match font family */
     color: blue; /* Match text color */
     margin-bottom: 0.5rem; /* Add spacing below the heading */
@@ -663,7 +838,6 @@ button:hover {
 .cv-card:hover, .contact-card:hover {
     background: antiquewhite; /* Match hover background color with project cards */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Restore the hover shadow effect */
-    transform: scale(1.05); /* Slightly enlarge the card to appear as if coming forward */
     cursor: pointer; /* Change the cursor to a pointer */
 }
 
@@ -672,14 +846,6 @@ button:hover {
     margin: 1.5rem; /* Reduced margin */
     padding: 2rem; /* Add consistent padding like .cv-card */
     flex: none; /* Prevent flex items from stretching */
-}
-
-.cv-preview {
-    width: 100%; /* Make the preview span the full width of the card */
-    height: 150px; /* Set a small height for the preview */
-    border: 1px solid #ccc; /* Add a border around the preview */
-    margin-bottom: 1rem; /* Add spacing below the preview */
-    border-radius: 5px; /* Match the border radius of the card */
 }
 
 /* Career Objectives Section */
@@ -699,9 +865,8 @@ button:hover {
 .career-objectives-card h2 {
     text-align: center; /* Center align the heading */
     font-size: 24px;
-    font-style: italic;
     font-family: "Georgia", serif;
-    color: #333;
+    color: black;
     margin: 0;
     color:blue;
 }
@@ -1032,7 +1197,7 @@ header {
     border: 1px solid #ccc;
     margin-left: 45px;
     margin-right: 45px;
-    border-radius: 10px;
+    margin-top: 50px;
     background: #e6e6e6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
     transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
@@ -1041,7 +1206,6 @@ header {
   #Tools:hover {
     background: antiquewhite; /* Restore the hover background color */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
-    transform: scale(1.05); /* Slightly zoom the flexbox */
     cursor: pointer; /* Change the cursor to indicate interactivity */
 }
   
@@ -1056,7 +1220,6 @@ header {
     font-size: 2rem;
     margin-bottom: 10px;
     color:blue;
-    font-style: italic;
     font-size: 24px;
     font-family: "Georgia", serif;
     font-weight: bold;
@@ -1067,7 +1230,6 @@ header {
     font-size: 1rem;
     max-width: 700px;
     margin: 0 auto 30px;
-    font-style: italic;
     font-family: "Georgia", serif;
     color: black;
   }
