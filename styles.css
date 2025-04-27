@@ -106,10 +106,7 @@ nav ul li a:hover {
     }
 }
 
-.profile-image:hover {
-    transform: translateX(10px); /* Slightly zoom the image on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect on hover */
-}
+
 
 .hero-text {
     display: flex;
@@ -130,16 +127,16 @@ nav ul li a:hover {
 }
 
 .hero-text:hover {
-    transform: translateX(-10px) scale(1.05); /* Increase left movement distance */
-    opacity: 1; /* Ensure the text remains visible */
-    color: black; /* Ensure the text color remains black on hover */
-    background: antiquewhite; /* Maintain the hover background color */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
+    transform: translateX(-10px) scale(1.05);
+    opacity: 1;
+    color: black;
+    background: antiquewhite;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text h2 {
     margin-bottom: 1rem;
-    font-size: 36px; /* Adjust font size for the heading */
+    font-size: 36px;
     font-weight: bold;
     font-style: normal !important;
 }
@@ -148,34 +145,34 @@ nav ul li a:hover {
     font-style: normal !important;
 }
 .hero-text p {
-    font-size: 20px; /* Adjust font size for the paragraph */
+    font-size: 20px;
     line-height: 1.6;
 }
 .input {
-    font-size: 1.2rem; /* Adjust as needed */
+    font-size: 1.2rem;
     font-weight: bold;
-    color: inherit; /* Keeps the same color as surrounding text */
+    color: inherit;
 }
 .hero-text p {
-    min-height: 40px; /* Prevents the box from shrinking while typing */
+    min-height: 40px;
 }
 
 .input {
-    display: inline-block; /* Keeps it inline, but allows width control */
-    min-width: 10px;       /* Prevents jumping as text changes */
-    font-size: 1.2rem;      /* Matches text size */
+    display: inline-block;
+    min-width: 10px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: inherit;
     white-space: nowrap;
 }
 
 .hero-text p {
-    font-size: 20px;        /* Matches paragraph font size */
+    font-size: 20px;
     line-height: 1.6;
-    min-height: 40px;       /* Keeps the space consistent */
-    white-space: nowrap;    /* Keeps everything in one line */
-    overflow: hidden;       /* Prevents overflow if screen is too small */
-    text-overflow: ellipsis; /* Optional: adds ... if text overflows */
+    min-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .input {
