@@ -33,14 +33,14 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
 
 Check out the live version of the portfolio [here](https://imani-prog.github.io/TimothyImaniProfile/).
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling and layout.
 - **JavaScript**: For interactivity and theme toggling.
 - **GitHub Pages**: For hosting the live demo.
 
-## 📧 Contact
+##  Contact
 
 Feel free to reach out to me:
 
