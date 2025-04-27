@@ -32,7 +32,7 @@ nav h1{
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.1rem;
   margin: 0;
   padding: 0;
 }
@@ -63,28 +63,28 @@ nav ul li a:hover {
 /* Hero Section */
 #hero {
     align-items: center;
-    padding: 3rem 1rem; /* Adjust padding for better alignment */
-    margin: 10rem 1.5rem 1.5rem 1.5rem; /* Add top margin to separate from navbar */
+    padding: 3rem 1rem;
+    margin: 10rem 1.5rem 1.5rem 1.5rem;
     color: black;
     font-size: 30px;
     font-style: normal !important;
     margin-top: 25px;
-    padding-top: 0.5px; /* Reduce this value */
+    padding-top: 0.5px;
     padding-bottom: 50px;
 }
 .hero-content {
     display: flex;
     align-items: center;
     margin-top: 5rem;
-    justify-content: space-between; /* Ensure equal spacing on both sides */
-    gap: 1rem; /* Adjust this value to control the spacing between the image and text flexbox */
-    padding-right: 10px; /* Reduce padding on the left and right */
+    justify-content: space-between;
+    gap: 1rem;
+    padding-right: 10px;
 }
 .profile-image {
-    width: 300px;              /* Set fixed width */
-    height: 300px;             /* Equal height */
-    border-radius: 50%;        /* Makes it a circle */
-    object-fit: cover;         /* Crop to fit the circle */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
     object-position: center;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -709,6 +709,86 @@ body.dark-mode .project-title p {
     }
   }
 
+  #services {
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+  
+  #services h2 {
+    font-size: 30px;
+    font-family: "Georgia", serif;
+    margin-bottom: 2rem;
+  }
+ .services-title h2 {
+    font-size: 30px;
+    font-family: "Georgia", serif; 
+  }
+  .services-title p {
+    font-size: 16px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.8;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .services-title p {
+      font-size: 14px;
+      margin-left: 20px;
+      margin-right: 20px;
+      line-height: 1.5;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-title p {
+      font-size: 12px;
+      margin-left: 10px;
+      margin-right: 10px;
+      line-height: 1.4;
+    }
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .service-card {
+    background: #F0F2F5;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+    transform: scale(1.02);
+    cursor: pointer;
+    
+  }
+  
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+  }
+  
+  .service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+
 /* Contact Form */
 form {
     display: flex;
@@ -736,7 +816,7 @@ button:hover {
 }
 
 .contact-card {
-    width: 800px; /* Fixed size covering half of the section */
+    width: 800px;
     float: right; /* Align to the right */
     padding: 20px;
     box-sizing: border-box;
@@ -891,8 +971,6 @@ button:hover {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color: black;
     border-top: 1px solid #ccc;
-    margin: 1.5rem;
-    border-radius: 10px;
 }
 
 /* Container for icons */
