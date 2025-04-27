@@ -1,8 +1,8 @@
-# Timothy Imani | Portfolio
+# Timothy Imani  Portfolio
 
 Welcome to my official portfolio . This project showcases my skills, projects, and professional journey as a **Database Administrator**, **Data Engineer**, and **Web Developer**.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design**: Fully responsive layout that adapts to different screen sizes.
 - **Dark Mode**: Toggle between light and dark themes for better user experience.
@@ -10,7 +10,7 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
 - **Downloadable CV**: Provides an option to download my CV directly.
 - **Contact Form**: Allows visitors to send messages directly via a contact form.
 
-## 📂 Project Structure
+##  Project Structure
 
 - **index.html**: The main HTML file containing the structure of the portfolio.
 - **styles.css**: The CSS file for styling the portfolio, including responsiveness and dark mode.
