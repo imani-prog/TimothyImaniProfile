@@ -17,7 +17,7 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
 - **script.js**: The JavaScript file for handling interactivity, such as theme toggling.
 - **Assets/**: Contains additional resources like the downloadable CV.
 
-## 🚀 How to Use
+##  How to Use
 
 1. Clone the repository:
    ```bash
@@ -29,7 +29,7 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
    ```
 3. Open `index.html` in your browser to view the portfolio.
 
-## 🌐 Live Demo
+##  Live Demo
 
 Check out the live version of the portfolio [here](https://imani-prog.github.io/TimothyImaniProfile/).
 
