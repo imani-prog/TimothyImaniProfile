@@ -2,75 +2,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Set dynamic greeting based on the current time
+    // Greeting based on time
     const greetingElement = document.getElementById("greeting");
     const currentHour = new Date().getHours();
 
     if (currentHour < 12) {
-        greetingElement.innerHTML = `Good Morning<span class="emoji">😊</span>`;
+        greetingElement.innerHTML = `Good Morning <span class="emoji">😊</span>`;
     } else if (currentHour < 18) {
-        greetingElement.innerHTML = `Good Afternoon<span class="emoji">😎</span>`;
+        greetingElement.innerHTML = `Good Afternoon <span class="emoji">😎</span>`;
     } else {
-        greetingElement.innerHTML = `Good Evening<span class="emoji">🌙</span>`;
+        greetingElement.innerHTML = `Good Evening <span class="emoji">😎</span>`;
     }
 
-    // Create star background container
-    const stars = document.createElement("div");
-    stars.className = "stars";
+    //typing effect
+    new Typed(".input", {
+        strings: ["Database Administrator", "Data Engineer", "Software Developer", "Excel Data Analyst"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
 
-    // Add stars only in dark mode
-    const toggleStars = (isDark) => {
-        if (isDark) {
-            if (!document.querySelector(".stars")) {
-                document.body.appendChild(stars);
-            }
-        } else {
-            const existingStars = document.querySelector(".stars");
-            if (existingStars) {
-                existingStars.remove();
-            }
-        }
-    };
-
-    // Check for saved theme in localStorage
+    // Theme toggle
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         const isDark = savedTheme === "dark";
         body.classList.toggle("dark-mode", isDark);
         themeToggle.textContent = isDark ? "☀" : "☾";
-        toggleStars(isDark);
     }
 
-    // Toggle theme on button click
     themeToggle.addEventListener("click", () => {
         const isDarkMode = body.classList.toggle("dark-mode");
         themeToggle.textContent = isDarkMode ? "☀" : "☾";
         localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-        toggleStars(isDarkMode);
     });
 
-    
-
-    // Typing effect on .input span inside the <p>
-    var typed = new Typed(".input", {
-        strings: ["Database Administrator", "Data Engineer", "Web Developer", "Excel Data Analyst"],
-        typeSpeed: 100,
-        backSpeed: 100,
-        loop: true
-    });
-    
-      // Start the star rai
-      window.addEventListener('load', () => {
-        const interval = setInterval(() => {
-          for (let i = 0; i < 20; i++) {
-            createColorfulStar(); // 20 stars per wave
-          }
-        }, 200);
-      
-        setTimeout(() => clearInterval(interval), 3000); // Stop spawning after 3 seconds
-      });
-      
-    // Back to Top button logic
+    // Back to top
     const backToTopBtn = document.getElementById("backToTop");
 
     window.addEventListener("scroll", () => {

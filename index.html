@@ -3,15 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Timothy Imani | Portfolio</title>
+        <title>Timothy Imani Portfolio</title>
         <link rel="stylesheet" href="./styles.css">
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link rel="icon" href="./Assets/profile1.jpg" type="image/jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Z73pGkF9p3e6p2Q6p4p5p6p" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <style>
           html {
             scroll-behavior: smooth;
           }
+          html {
+            scroll-padding-top: 80px;
+          }
+          
         </style>
       </head>
 <body>
@@ -27,22 +32,20 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a></li>
-                    <li><a href="#cv-contact-container">Contact</a></li>
-                    <!-- Theme Toggle Button -->
+                    <!-- Theme Toggle -->
                     <li><button id="theme-toggle">🌙</button></li>
                 </ul>
             </nav>
         </header>
     </body>
-    <div class="star-container" id="starContainer"></div>
-
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <img src="./Assets/profile1.jpg" alt="Profile Picture" class="profile-image">
             <div class="hero-text">
-                <h2 id="greeting"></h2> <!-- Placeholder for dynamic greeting -->
+                <h2 id="greeting"></h2>
                 <h2>I'm <span>Timothy Imani</span></h2>
                 <p><span class="input"></span></p>
             </div>
@@ -193,27 +196,32 @@
             <p>As a junior professional, I’ve worked on projects involving database management, data engineering, and web development. My experience includes automating data workflows, building interactive systems, and creating responsive websites that ensure seamless user experiences and efficient back-end processes with smooth database integration.</p>
         </div>
         <div class="project-grid">
-            <!-- Project 1 -->
+            
             <div class="project-card">
                 <h3>Sample Data Importing Using Python</h3>
                 <img src="./Assets/background2.jpg" alt="Data Importing Project" class="project-image">
                 <p>Explore the project on <a href="https://github.com/imani-prog/data_importing.git" target="_blank">GitHub</a> or try the <a href="https://imani-prog-data-importing-dashboard-jhzokj.streamlit.app/" target="_blank">deployed app</a>.</p>
             </div>
-            <!-- Project 2 -->
+            
             <div class="project-card">
                 <h3>Watulivu Barber Shop</h3>
                 <img src="./Assets/watulivu.jpg" alt="Barber Shop Project" class="project-image">
                 <p>Visit the <a href="https://imani-prog.github.io/BarberShop/" target="_blank">live site</a> or check out the <a href="https://github.com/imani-prog/BarberShop.git" target="_blank">GitHub repository</a>.</p>
             </div>
-            <!-- Project 3 -->
+            
             <div class="project-card">
                 <h3>Tora Dental Clinic</h3>
                 <img src="./Assets/tora.png" alt="Tora Dental Clinic" class="project-image">
                 <p>Visit the <a href="https://imani-prog.github.io/ToraDentalClinic/" target="_blank">live website</a> or check out the <a href="https://github.com/imani-prog/ToraDentalClinic.git" target="_blank">GitHub repository</a>.</p>
             </div>
         </div>
+        <div class="more-projects">
+          <a href="https://github.com/imani-prog" target="_blank" title="GitHub">
+            <button class="more-projects-button">View More Projects</button>
+          </a>
+        </div>
     </section>
-
+    <!-- Services Section -->
     <section id="services">
       <div class="services-title">
         <h2>Services</h2>
@@ -221,13 +229,15 @@
           Explore my services to discover how I can support your growth and success online.</p>
       <div class="services-grid">
         <div class="service-card">
+          <h3>Software Architecture</h3>
+          <p>Planning how software is built by organizing code into clear, simple parts that work well together and are easy to maintain or improve later.</p>
+        </div>
+        
+        <div class="service-card">
           <h3>Database Management</h3>
           <p>Designing, optimizing, and maintaining efficient database systems to ensure data integrity and performance.</p>
         </div>
-        <div class="service-card">
-          <h3>Database Design & Architecture</h3>
-          <p>Creating scalable, normalized database structures that ensure long-term performance and maintainability.</p>
-        </div>
+        
 
         <div class="service-card">
           <h3>Data Engineering</h3>
@@ -252,30 +262,24 @@
     </section>
     
 
-    <!-- Career Objectives and Contact Section -->
-    <section id="cv-contact-container">
-        <!-- Career Objectives Section -->
-        <div class="career-objectives-card">
-            <h2>Career Objectives</h2>
-            <p>As an entry-level professional, I am eager to contribute to innovative projects, learn from experienced mentors, and grow my expertise in database administration, data engineering, and web development. My goal is to leverage my skills to build scalable, efficient, and impactful solutions that drive success for organizations.</p>
-            <p>I am passionate about solving complex problems, staying updated with industry trends, and continuously improving my technical and interpersonal skills. I am excited to collaborate with teams that value creativity, innovation, and a commitment to excellence.</p>
+    <!--Contact Section -->
+    <section id="contact">
+      <div class="contact-card">
+          <h2>Get in Touch</h2>
+          <p>If you have any questions, project ideas, or just want to say hello, feel free to reach out using the form below. I'll get back to you as soon as possible!</p>
         </div>
-        <!-- Contact Section -->
-        <div class="contact-card">
-            <h2>Contact</h2>
-            <form id="contact-form" action="https://formspree.io/f/mrbpyrjp" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+          <form id="contact-form" action="https://formspree.io/f/mrbpyrjp" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Submit</button>
+          </form>
+  </section>
+  
 
     <!-- Footer Section -->
     <footer id="footer">
       <div class="footer-contacts">
-        <!-- Footer icons -->
         <div class="footer-icons">
           <a href="mailto:timothyimani6@gmail.com" target="_blank" title="Email">
             <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="footer-icon">
@@ -291,12 +295,10 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="footer-icon">
           </a>
         </div>
-    
         <p>Call or SMS: <a href="tel:+254743669252">+254743669252</a></p>
       </div>
-    
       <div class="footer-back-to-top">
-        <button id="backToTop" title="Back to Top">Back to Top</button>
+        <button id="backToTop" title="Back to Top">↑</button>
       </div>
     <hr>
       <p>&copy; 2025 Timothy Imani.  All rights reserved.</p>

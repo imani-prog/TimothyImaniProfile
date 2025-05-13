@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-   will-change: background-color, color;
+  will-change: background-color, color;
   color: black;
   border: 2px solid blue;
 }
@@ -93,14 +93,14 @@ nav ul li a:hover {
 
 @media (max-width: 500px) {
     .profile-image {
-        margin: 0 auto;            /* Center horizontally */
-        display: block;            /* Required for margin auto to work */
+        margin: 0 auto;
+        display: block;
         margin-top: 0px;
     }
 
     .hero-content {
-        flex-direction: column;   /* Stack vertically */
-        align-items: center;      /* Center all items */
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         gap: 1.5rem;
     }
@@ -113,21 +113,20 @@ nav ul li a:hover {
     flex-direction: column;
     font-style: normal !important;
     justify-content: center;
-    text-align: left; /* Align text to the left */
-    color: black; /* Set the text color to black */
-    height: 300px; /* Match the height of the image */
-    background: #e6e6e6; /* Add the same background color as the #about section */
-    border-radius: 10px; /* Match the rounded corners */
-    padding: 1rem; /* Adjust padding for balance */
-    flex: 1; /* Ensure this allows the text flexbox to take up the remaining space */
-    transition: transform 0.8s ease, opacity 0.8s ease, color 0.8s ease, background 0.8s ease, box-shadow 0.8s ease; /* Smooth transitions */
-    margin-left: 200px; /* Maintain initial position */
-    margin-right: 40px; /* Maintain spacing from the image */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+    text-align: left;
+    color: black;
+    height: 300px;
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1;
+    transition: transform 0.8s ease, opacity 0.8s ease, color 0.8s ease, background 0.8s ease, box-shadow 0.8s ease;
+    margin-left: 200px;
+    margin-right: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
 }
 
 .hero-text:hover {
-    transform: translateX(-10px) scale(1.05);
     opacity: 1;
     color: black;
     background: antiquewhite;
@@ -176,9 +175,9 @@ nav ul li a:hover {
 }
 
 .input {
-    display: inline-block;  /* Needed to control width */
-    min-width: 400px;       /* Reserve space to avoid jumping */
-    font-size: 20px;        /* Match the <p> font size */
+    display: inline-block;
+    min-width: 400px;
+    font-size: 20px;
     font-weight: bold;
     color: blue;
     white-space: nowrap;
@@ -186,10 +185,10 @@ nav ul li a:hover {
 
 @media (max-width: 400px) {
     .hero-content {
-        flex-direction: column;      /* Stack vertically */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem;                 /* Space between image and text */
+        gap: 1.5rem;
     }
 
     .profile-image {
@@ -206,7 +205,7 @@ nav ul li a:hover {
             padding: 1rem;
             text-align: center;
     
-            /* Disable any transformation or shadow on hover */
+            
             transform: none !important;
             box-shadow: none !important;
             background: #e6e6e6 !important;
@@ -291,62 +290,62 @@ nav ul li a:hover {
   }
   
 
-.project-card, .career-objectives-card, .contact-card {
-    background: #e6e6e6; /* Restore the original background color */
-    border-radius: 10px; /* Maintain the border radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
-    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
+.project-card{
+    background: #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-.project-card:hover, .career-objectives-card:hover {
-    background: antiquewhite; /* Restore the hover background color */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
-    transform: scale(1.05); /* Slightly zoom the flexbox */
-    cursor: pointer; /* Change the cursor to indicate interactivity */
+.project-card:hover:hover {
+    background: antiquewhite;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 #about {
-    flex: 1; /* Allow the about section to take up available space */
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 2rem;
     gap: 1rem;
-    max-width: 450px; /* Increased size to reduce empty space */
+    max-width: 450px;
     margin: 1.5rem;
     font-style: normal !important;
 }
 #about h2 {
-    text-align: center; /* Center align the heading */
+    text-align: center;
     font-size: 24px;
     margin: 0;
     font-style: normal !important;
 }
 
 #about {
-    flex: 1; /* Allow the about section to take up available space */
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 2rem;
     gap: 1rem;
-    max-width: 450px; /* Increased size to reduce empty space */
-    margin: 1.5rem; /* Reduced margin */
+    max-width: 450px;
+    margin: 1.5rem;
     display: flex;
     margin-left: 150px;
-    position: relative; /* Enable positioning for the image */
+    position: relative;
 }
 
 /* Light mode styles for the #about section */
 body:not(.dark-mode) #about h2,
 body:not(.dark-mode) #about p {
-    color: black; /* Dark text for light background */
+    color: black;
 }
 
 /* Dark mode styles for the #about section */
 body.dark-mode #about h2,
 body.dark-mode #about p {
-    color: #fff; /* White text for dark background */
+    color: #fff;
 }
 
 #about p {
@@ -373,7 +372,7 @@ body.dark-mode #about p {
     color: black;
     margin-top: 2rem;
     padding-left: 1.5rem;
-    border-left: 4px solid #007BFF; /* Accent color for the quote */
+    border-left: 4px solid #007BFF;
 }
 
 .quote footer {
@@ -416,17 +415,17 @@ body.dark-mode .quote footer {
   
   /* Individual skill section */
   .skills-section {
-    display: flex; /* Flexbox for vertical alignment inside each section */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content horizontally */
-    text-align: center; /* Center-align text */
-    background-color: #F0F2F5; /* Light background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F0F2F5;
     padding: 20px;
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    max-width: 300px; /* Limit the width of each section */
-    width: 100%; /* Ensure the section takes full available space within the grid cell */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
   }
   
   .skills-section:hover{
@@ -437,29 +436,29 @@ body.dark-mode .quote footer {
   }
   /* Skill title */
   .skills-section h3 {
-    font-size: 1.2em; /* Slightly larger font size for the title */
-    margin-bottom: 10px; /* Space between title and description */
-    color: #0000ff; /* Blue color for the title */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #0000ff;
   }
   
   /* Skill list */
   .skills-section ul {
-    list-style-type: none; /* Use bullet points for the list */
-    padding-left: 20px; /* Indent the list */
-    margin: 0; /* Remove default margins */
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
   }
   
   /* Skill list items */
   .skills-section li {
-    font-size: 20px; /* Smaller font size for the list items */
-    color: black; /* Grayish color for the list items */
+    font-size: 20px;
+    color: black;
   }
   
   /* Style for the h2 element */
   h2 {
-    text-align: center; /* Center align the text */
-    font-size: 30px; /* Set the font size to 20px */
-    margin-bottom: 20px; /* Add some spacing below the heading */
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: bold;
 
@@ -468,27 +467,27 @@ body.dark-mode .quote footer {
 
   /* Icons */
 .skill-icon {
-    height: 40px; /* Set a consistent height for all icons */
-    width: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add spacing between icons and the title */
+    height: 40px;
+    width: auto;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 768px) {
     .skills-container {
-      grid-template-columns: 1fr; /* Only one column on small screens */
-      margin-left: 20px; /* Smaller margins */
+      grid-template-columns: 1fr;
+      margin-left: 20px;
       margin-right: 20px;
-      gap: 20px; /* Reduce gap a little for small screens */
+      gap: 20px;
       padding-top: 20px;
-      box-sizing: border-box; /* Prevent overflow */
+      box-sizing: border-box;
     }
   
     .skills-section {
-      max-width: 100%; /* Full width inside grid */
+      max-width: 100%;
     }
     
     .skills-section ul {
-      padding-left: 10px; /* Reduce padding for list */
+      padding-left: 10px;
     }
   }
 
@@ -500,7 +499,7 @@ h2 {
   }
   
   #education {
-    max-width: 1200px; /* Adjusted to fit all items */
+    max-width: 1200px;
     margin-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
@@ -511,15 +510,15 @@ h2 {
   }
   
   .education-container {
-    display: flex; /* Flex container for horizontal layout */
-    justify-content: space-between; /* Distribute items evenly */
-    flex-wrap: nowrap; /* Prevent wrapping to ensure all items stay in one line */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
   
   .education-item {
-    display: flex; /* Each item is a flex container */
-    flex-direction: column; /* Stack icon and details vertically */
-    align-items: center; /* Center-align content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     width: 25%;
     padding: 15px;
@@ -538,29 +537,29 @@ h2 {
   }
   
   .education-item i {
-    font-size: 40px; /* Icon size */
-    color: #1a82f1; /* Icon color */
+    font-size: 40px;
+    color: #1a82f1;
   }
   
   .education-details h3 {
     font-size: 1.25rem;
     margin: 0;
     color: blue;
-    text-align: center; /* Center-align the title */
+    text-align: center;
   }
   
   .education-details .institution {
     font-size: 1rem;
     color: #555;
     margin: 0;
-    text-align: center; /* Center-align the institution name */
+    text-align: center;
   }
   
   .education-details .years {
     font-size: 1rem;
     color: #777;
     margin: 0;
-    text-align: center; /* Center-align the years */
+    text-align: center;
   }
   @media (max-width: 768px) {
     #education {
@@ -569,14 +568,14 @@ h2 {
     }
   
     .education-container {
-      flex-wrap: wrap; /* Allow wrapping on small screens */
-      justify-content: center; /* Center items if wrapping */
-      gap: 20px; /* Optional: add gap between wrapped items */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
   
     .education-item {
-      width: 100%; /* Full width on small screens */
-      max-width: 300px; /* Limit width to avoid too stretched look */
+      width: 100%;
+      max-width: 300px;
     }
   }
 
@@ -585,45 +584,45 @@ h2 {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.5rem; /* Reduced gap between project cards */
-    padding: 1.5rem; /* Reduced padding */
-    text-align: center; /* Ensure all child elements, including h2, are centered */
+    gap: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
 }
 .project-card {
     padding: 0px;
-    border-radius: 10px; /* Maintain the border radius */
+    border-radius: 10px;
     text-align: center;
-    margin: 0.5rem; /* Add spacing between project cards */
+    margin: 0.5rem;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align content horizontally */
-    gap: 1rem; /* Add spacing between elements */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .project-image {
-    width: 100%; /* Ensure the image is responsive */
-    max-width: 200px; /* Limit the maximum width for project images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Add rounded corners */
-    object-fit: cover; /* Ensure the image fills its container without distortion */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    margin: 0 auto; /* Center the image horizontally */
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .project-grid h2 {
-    display: block; /* Ensure it behaves as a block element */
-    margin: 0 auto; /* Center horizontally */
-    margin-left: auto; /* Add left margin to test movement */
-    text-align: center; /* Center the text */
+    display: block;
+    margin: 0 auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 /* Projects Section */
 #projects {
-    font-size: 18px; /* Match font size with #about */
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match font family with #about */
-    line-height: 1.8; /* Match line height with #about */
-    color: black; /* Match text color with #about */
-    text-align: left; /* Match text alignment with #about */
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.8;
+    color: black;
+    text-align: left;
     padding-top: 40px;
     font-style: normal !important;
     margin-left: 100px;
@@ -632,40 +631,40 @@ h2 {
 }
 
 .project-title h2 {
-    margin-bottom: 0.5rem; /* Add spacing below the heading */
-    text-align: center; /* Center-align the heading */
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 .project-title h2 {
-    font-size: 30px; /* Match heading font size with #about h2 */
-    font-family: "Georgia", serif; /* Match heading font family */
+    font-size: 30px;
+    font-family: "Georgia", serif;
 }
 .project-title p {
-    font-size: 18px; /* Match paragraph font size with #about p */
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
-    line-height: 1.3; /* Match paragraph line height */
-    color: black; /* Match paragraph text color */
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.3;
+    color: black;
     text-align: center;
 }
 
 body:not(.dark-mode) .project-title h2, 
 body:not(.dark-mode) .project-title p {
-    color: black; /* Dark text for light mode */
+    color: black;
 }
 
 body.dark-mode .project-title h2, 
 body.dark-mode .project-title p {
-    color: white; /* Light text for dark mode */
+    color: white;
 }
 .project-card h3 {
-    font-size: 20px; /* Adjust font size for project titles */
-    font-family: "Georgia", serif; /* Match font family */
+    font-size: 20px;
+    font-family: "Georgia", serif;
     color:blue;
 }
 .project-card p {
-    font-size: 18px; /* Match paragraph font size */
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Match paragraph font family */
-    line-height: 1.8; /* Match paragraph line height */
-    color: black; /* Match paragraph text color */
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.8;
+    color: black;
 }
 
 @media (max-width: 768px) {
@@ -673,53 +672,74 @@ body.dark-mode .project-title p {
       margin-left: 20px;
       margin-right: 20px;
       padding-top: 20px;
-      font-size: 16px; /* Slightly smaller font for better fit */
-      line-height: 1.6; /* Tighten line height slightly */
-      text-align: center; /* Center text on mobile for better appearance */
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
     }
   
     .project-grid {
-      grid-template-columns: 1fr; /* Stack project cards vertically */
-      padding: 1rem; /* Slightly reduced padding */
-      gap: 1rem; /* More breathing space between cards */
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      gap: 1rem;
     }
   
     .project-card {
-      margin: 0 auto; /* Center each card */
+      margin: 0 auto;
       width: 100%;
-      max-width: 300px; /* Limit card width on small devices */
+      max-width: 300px;
     }
   
     .project-title h2 {
-      font-size: 24px; /* Slightly smaller heading */
+      font-size: 24px;
     }
   
     .project-title p {
-      font-size: 16px; /* Smaller paragraph font */
+      font-size: 16px;
       line-height: 1.6;
-      padding: 0 10px; /* Add side padding inside */
+      padding: 0 10px;
     }
   
     .project-image {
-      max-width: 100%; /* Let image be responsive inside card */
+      max-width: 100%;
       height: auto;
     }
+  }
+  .more-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .more-projects-button {
+    background-color: #3399FF;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   #services {
     padding: 40px 20px;
     text-align: center;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*background-color: #555;*/
   }
   
   #services h2 {
     font-size: 30px;
     font-family: "Georgia", serif;
     margin-bottom: 2rem;
+    
   }
- .services-title h2 {
+.services-title h2 {
     font-size: 30px;
-    font-family: "Georgia", serif; 
+    font-family: "Georgia", serif;
   }
   .services-title p {
     font-size: 16px;
@@ -730,7 +750,6 @@ body.dark-mode .project-title p {
     margin-right: 40px;
   }
   
-  /* Media Query for smaller screens */
   @media (max-width: 768px) {
     .services-title p {
       font-size: 14px;
@@ -757,7 +776,7 @@ body.dark-mode .project-title p {
   }
   
   .service-card {
-    background: #F0F2F5;
+    background-color: rgba(51, 153, 255, 1);
     border-radius: 10px;
     padding: 1.5rem;
     width: 250px;
@@ -781,181 +800,110 @@ body.dark-mode .project-title p {
   
   .service-card p {
     font-size: 16px;
-    color: #555;
+    color: black;
     line-height: 1.5;
   }
   
+/* Contact Section */
+#contact{
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
 
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+
+#contact h2 {
+  font-size: 28px;
+  font-style: bold;
+  font-family: "Georgia", serif;
 }
-form input, form textarea {
-    padding: 0.5rem;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-button {
-    padding: 0.5rem;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background: #ffcc00;
-    color: black;
-    cursor: pointer; /* Added pointer cursor */
+
+#contact p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .contact-card {
-    width: 800px;
-    float: right; /* Align to the right */
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px; /* Maintain the border radius */
-    margin: 1.5rem; /* Reduced margin */
-    background: #e6e6e6; /* Match the background color of the career objectives flexbox */
-    border: 1px solid #ccc; /* Ensure consistent border style */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8); /* Add a shiny blue outline */
+  text-align: center;
+  align-items: center;
 }
 
-.contact-card h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color:blue;
-}
-
+/* Form Elements */
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 50px;
 }
 
 #contact-form input,
 #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
+  
+  padding: 10px;
+  border: 1.5px solid blue;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 #contact-form textarea {
-    height: 150px; /* Fixed height */
-    resize: none; /* Disable resizing completely */
-    overflow-y: scroll; /* Force vertical scrollbars */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
+  height: 150px;
+  resize: none;
+  overflow-y: scroll;
 }
 
 #contact-form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #contact-form button:hover {
-    background-color: #555;
+  background-color: blue;
 }
 
-/* CV Section */
-#cv-contact-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space out the Career Objectives and Contact sections */
-    align-items: flex-start; /* Align items at the top */
-    gap: 0.01rem; /* Reduced gap between the flexboxes */
-    padding: 1.5rem; /* Maintain reduced padding */
-}
 
-#cv-contact-container .cv-card, 
-#cv-contact-container .contact-card {
-    max-width: 450px; /* Match the max-width of the #about section */
-    margin: 1.5rem; /* Reduced margin */
-    padding: 2rem; /* Add consistent padding like #about */
-    flex: none; /* Prevent flex items from stretching */
-}
-
-.cv-card, .contact-card {
-    text-align: center; /* Center-align the text */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.cv-card h2, .contact-card h2 {
-    font-size: 20px; /* Match font size with project card titles */
-    font-family: "Georgia", serif; /* Match font family */
-    color: blue; /* Match text color */
-    margin-bottom: 0.5rem; /* Add spacing below the heading */
-}
-
-.cv-card a, .contact-card a {
-    color: blue; /* Set the text color to blue to appear like a link */
-    text-decoration: none; /* Remove underline from the link */
-    cursor: pointer; /* Ensure the cursor is a pointer */
-}
-
-.cv-card a:hover, .contact-card a:hover {
-    color: blue; /* Maintain the blue color on hover */
-    text-decoration: none; /* Ensure no underline appears on hover */
-}
-
-.cv-card:hover, .contact-card:hover {
-    background: antiquewhite; /* Match hover background color with project cards */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Restore the hover shadow effect */
-    cursor: pointer; /* Change the cursor to a pointer */
-}
-
-.contact-card {
-    max-width: 450px; /* Match the max-width of the .cv-card */
-    margin: 1.5rem; /* Reduced margin */
-    padding: 2rem; /* Add consistent padding like .cv-card */
-    flex: none; /* Prevent flex items from stretching */
-}
-
-/* Career Objectives Section */
-.career-objectives-card {
-    flex: 1; /* Allow the section to take up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: 1rem;
-    border: 1px solid #ccc;
-    max-width: 450px; /* Match the size of the #about section */
-    margin: 1.5rem; /* Reduced margin */
-}
-
-.career-objectives-card h2 {
-    text-align: center; /* Center align the heading */
-    font-size: 24px;
-    font-family: "Georgia", serif;
-    color: black;
+@media (max-width: 768px) {
+  #contact {
+    padding: 1rem;
     margin: 0;
-    color:blue;
-}
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.career-objectives-card p {
-    font-size: 18px;
-    font-style: italic;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    line-height: 1.8;
-    color: black;
-    text-align: left;
-    margin: 0;
+  #contact-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+
+  .contact-card h2 {
+    font-size: 20px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    padding: 0 1rem;
+    text-align: center;
+  }
 }
 
 /* Footer */
@@ -973,9 +921,9 @@ button:hover {
 /* Container for icons */
 .footer-icons {
     display: flex;
-    justify-content: center; /* Center icons horizontally */
-    align-items: center;      /* Align icons vertically */
-    gap: 1rem;                /* Space between icons */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin-top: 1rem;
 }
 
@@ -986,18 +934,18 @@ button:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* If using font icons like Font Awesome */
+
 .footer-icons i {
     font-size: 24px;
 }
 
 .footer-icons a:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
-    color: blue; /* Change icon color on hover */
+    transform: scale(1.2);
+    color: blue;
 
 }
 
-/* If using image icons like SVGs */
+
 .footer-icon {
     width: 30px;
     height: 30px;
@@ -1005,7 +953,7 @@ button:hover {
 }
 
 #footer p {
-    font-size: 14px; /* Reduce font size for copyright text */
+    font-size: 14px;
     margin: 0;
 }
 #footer hr {
@@ -1014,7 +962,6 @@ button:hover {
     margin: 1rem 0;
     margin-top: 0.5rem;
 }
-
 
 
 /* Style for the Back to Top button */
@@ -1027,20 +974,21 @@ button:hover {
     cursor: pointer;
     font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
     margin: 1rem 0;
-    display: inline-block;
-    margin-bottom: 0.5rem; /* Add margin to the bottom */
+    margin-bottom: 0.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 #backToTop:hover {
     background-color: #0056b3;
 }
 
-/* Center the button */
 .footer-back-to-top {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
@@ -1051,201 +999,201 @@ button:hover {
 }
 
 .dark-mode #theme-toggle {
-    background: #555; /* Darker button background in dark mode */
-    color: white; /* Light text for contrast */
+    background: #555;
+    color: white;
 }
 
 /* Theme Toggle Button */
 #theme-toggle {
-    background: black; /* Bright yellow background for light mode */
-    color: white; /* Black text for contrast */
-    border: none; /* Remove default border */
-    border-radius: 50%; /* Make it circular */
-    padding: 0.5rem 1rem; /* Add padding for better appearance */
-    font-size: 18px; /* Set a readable font size */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Navbar */
     nav {
-        flex-direction: column; /* Stack all elements vertically */
-        align-items: center; /* Center-align items */
-        padding: 0.5rem; /* Adjust padding for smaller screens */
-        margin: 0.2rem; /* Further reduce margin for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        margin: 0.2rem;
     }
 
     nav h1 {
-        display: inline-block; /* Ensure h1 and icon are inline */
-        font-size: 14px; /* Reduce font size for smaller screens */
-        margin: 0; /* Remove extra margin */
+        display: inline-block;
+        font-size: 14px;
+        margin: 0;
     }
 
     #theme-toggle {
-        display: inline-block; /* Ensure the icon is inline with h1 */
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 0.3rem; /* Adjust padding for compactness */
-        margin-left: auto; /* Push the icon to the right */
+        display: inline-block;
+        font-size: 14px;
+        padding: 0.3rem;
+        margin-left: auto;
     }
 
     nav ul {
-        flex-direction: row; /* Arrange navigation links horizontally */
-        gap: 0.5rem; /* Adjust spacing between links */
-        justify-content: flex-start; /* Align links to the left */
-        flex-wrap: wrap; /* Allow wrapping if necessary */
-        margin-top: 0.5rem; /* Add spacing below h1 and icon */
-        width: 100%; /* Ensure the links span the full width */
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        width: 100%;
     }
 
     nav ul li a {
-        font-size: 10px; /* Further reduce font size for smaller screens */
-        font-weight: 300; /* Reduce font weight for better fit */
-        padding: 0.1rem 0.3rem; /* Minimize padding for compact layout */
-        white-space: nowrap; /* Prevent text wrapping */
+        font-size: 10px;
+        font-weight: 300;
+        padding: 0.1rem 0.3rem;
+        white-space: nowrap;
     }
 
     #theme-toggle {
-        position: absolute; /* Position the icon absolutely */
-        top: 0.5rem; /* Position it near the top */
-        right: 1rem; /* Align it to the right corner */
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 0.3rem; /* Adjust padding for compactness */
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 14px;
+        padding: 0.3rem;
     }
 
     #hero {
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 2rem 1rem; /* Reduce padding for smaller screens */
-        font-size: 20px; /* Adjust font size for smaller screens */
+        flex-direction: column;
+        padding: 2rem 1rem;
+        font-size: 20px;
         transform: none;
     }
     .hero-content {
-        flex-direction: column; /* Stack image and text vertically */
-        gap: 1rem; /* Maintain spacing between elements */
+        flex-direction: column;
+        gap: 1rem;
     }
     .profile-image {
-        width: 100%; /* Ensure the image takes full width of its container */
-        max-width: 200px; /* Limit the maximum width for responsiveness */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        max-width: 200px;
+        height: auto;
     }
     .hero-text {
-        margin-left: 0; /* Remove left margin */
-        height: auto; /* Allow height to adjust dynamically */
-        text-align: center; /* Center-align text */
-        transform: none; /* Disable the transform effect on mobile responsiveness */
-        height: auto; /* Allow height to adjust dynamically */
-        padding: 1rem; /* Adjust padding for better fit */
-        margin: 0 1rem; /* Add margins to fit within the container */
-        overflow: hidden; /* Ensure no overflow of text */
-        transform: none; /* Disable the transform effect on mobile responsiveness */
+        margin-left: 0;
+        height: auto;
+        text-align: center;
+        transform: none;
+        height: auto;
+        padding: 1rem;
+        margin: 0 1rem;
+        overflow: hidden;
+        transform: none;
     }
 
     /* About and Skills Sections */
     #about-skills-container {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 1rem; /* Maintain spacing between sections */
+        flex-direction: column;
+        gap: 1rem;
     }
     #about, #skills {
-        max-width: 100%; /* Allow sections to take full width */
-        margin: 1rem 0; /* Adjust margins for vertical stacking */
-        padding: 1.5rem; /* Reduce padding for smaller screens */
+        max-width: 100%;
+        margin: 1rem 0;
+        padding: 1.5rem;
     }
 
     /* Projects Section */
     .project-grid {
-        grid-template-columns: 1fr; /* Display one project per row */
-        gap: 1rem; /* Maintain spacing between project cards */
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     /* CV and Contact Sections */
     #cv-contact-container {
-        flex-direction: column; /* Stack sections vertically */
-        gap: 1rem; /* Maintain spacing between sections */
-        padding: 0 1rem; /* Adds 1rem padding left and right */
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
     }
     .cv-card, .contact-card {
-        max-width: 100%; /* Allow sections to take full width */
-        margin: 1rem 0; /* Adjust margins for vertical stacking */
-        padding: 1.5rem; /* Reduce padding for smaller screens */
+        max-width: 100%;
+        margin: 1rem 0;
+        padding: 1.5rem;
     }
 
     /* Contact Form */
     #contact-form {
-        width: 100%; /* Make the form take full width */
-        padding: 1rem /* Adjust padding for smaller screens */
+        width: 100%;
+        padding: 1rem;
     }
     #contact-form input,
     #contact-form textarea {
-        width: 100%; /* Ensure inputs and textarea take full width */
-        font-size: 14px; /* Reduce font size for smaller screens */
+        width: 100%;
+        font-size: 14px;
     }
     #contact-form button {
-        width: 100%; /* Make the button take full width */
-        font-size: 14px; /* Reduce font size for smaller screens */
+        width: 100%;
+        font-size: 14px;
     }
     .contact-card {
-        width: 100%; /* Make the contact card take full width */
-        margin: 1rem; /* Adjust margins for vertical stacking */
-        padding: 1.5rem; /* Reduce padding for smaller screens */
+        width: 100%;
+        margin: 1rem;
+        padding: 1.5rem;
     }
 
     /* Footer */
     #footer {
-        font-size: 14px; /* Reduce font size for smaller screens */
-        padding: 1rem; /* Adjust padding for smaller screens */
+        font-size: 14px;
+        padding: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further adjustments for very small screens */
+    
     .profile-image {
-        max-width: 150px; /* Further reduce the size of the profile image on very small screens */
+        max-width: 150px;
     }
     .project-image {
-        max-width: 200px; /* Further reduce the size of project images on very small screens */
+        max-width: 200px;
     }
     nav ul li a {
-        font-size: 16px; /* Further reduce font size */
+        font-size: 16px;
     }
     #hero {
-        font-size: 20px; /* Further reduce font size */
+        font-size: 20px;
     }
     .hero-text h2 {
-        font-size: 28px; /* Reduce heading size */
+        font-size: 28px;
     }
     .hero-text p {
-        font-size: 16px; /* Reduce paragraph size */
+        font-size: 16px;
     }
     #about h2, #skills h2 {
-        font-size: 20px; /* Reduce heading size */
+        font-size: 20px;
     }
     #about p, #skills p {
-        font-size: 16px; /* Reduce paragraph size */
+        font-size: 16px;
     }
     .project-card {
-        padding: 1rem; /* Reduce padding */
+        padding: 1rem;
     }
     .project-card h3 {
-        font-size: 18px; /* Reduce font size */
+        font-size: 18px;
     }
     .project-card p {
-        font-size: 14px; /* Reduce font size */
+        font-size: 14px;
     }
     #contact-form input,
     #contact-form textarea {
-        font-size: 12px; /* Further reduce font size */
-        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 12px;
+        padding: 0.5rem;
     }
     #contact-form button {
-        font-size: 12px; /* Further reduce font size */
-        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 12px;
+        padding: 0.5rem;
     }
     .contact-card {
-        padding: 1rem; /* Further reduce padding */
+        padding: 1rem;
     }
     #footer {
-        font-size: 12px; /* Further reduce font size */
+        font-size: 12px;
     }
     body {
         overflow-x: hidden;
@@ -1255,13 +1203,13 @@ button:hover {
 /* Header */
 header { 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
-     padding-top: 90px;  /* Smooth transition for hover effects */
+     padding-top: 90px;
  } 
 
  header:hover { 
-     /* transform: scale(0.55);  *//* Slightly enlarge the header to appear as if coming forward */
-     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
-    cursor: pointer;  /* Change the cursor to a pointer */
+     
+     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
  }
  #Tools {
     padding: 40px 20px;
@@ -1279,9 +1227,9 @@ header {
   }
 
   #Tools:hover {
-    background: antiquewhite; /* Restore the hover background color */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
-    cursor: pointer; /* Change the cursor to indicate interactivity */
+    background: antiquewhite;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
   
   .tools-container {
@@ -1321,7 +1269,7 @@ header {
     align-items: center;
     gap: 30px;
     animation: slide 30s linear infinite;
-    min-width: max-content; /* Keeps icons in one horizontal row */
+    min-width: max-content;
     padding: 0 20px;
   }
   
