@@ -1,4 +1,4 @@
-# Timothy Imani | Portfolio
+# Timothy Imani  Portfolio
 
 Welcome to my official portfolio . This project showcases my skills, projects, and professional journey as a **Database Administrator**, **Data Engineer**, and **Web Developer**.
 
@@ -10,14 +10,22 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
 - **Downloadable CV**: Provides an option to download my CV directly.
 - **Contact Form**: Allows visitors to send messages directly via a contact form.
 
+<<<<<<< HEAD
 ## Project Structure
+=======
+##  Project Structure
+>>>>>>> 4585478c5c6ccbbff01442d75e97d5e74348113f
 
 - **index.html**: The main HTML file containing the structure of the portfolio.
 - **styles.css**: The CSS file for styling the portfolio, including responsiveness and dark mode.
 - **script.js**: The JavaScript file for handling interactivity, such as theme toggling.
 - **Assets/**: Contains additional resources like the downloadable CV.
 
+<<<<<<< HEAD
 ## How to Use
+=======
+##  How to Use
+>>>>>>> 4585478c5c6ccbbff01442d75e97d5e74348113f
 
 1. Clone the repository:
    ```bash
@@ -29,7 +37,11 @@ Welcome to my official portfolio . This project showcases my skills, projects, a
    ```
 3. Open `index.html` in your browser to view the portfolio.
 
+<<<<<<< HEAD
 ## Live Demo
+=======
+##  Live Demo
+>>>>>>> 4585478c5c6ccbbff01442d75e97d5e74348113f
 
 Check out the live version of the portfolio [here](https://imani-prog.github.io/TimothyImaniProfile/).
 
@@ -40,7 +52,11 @@ Check out the live version of the portfolio [here](https://imani-prog.github.io/
 - **JavaScript**: For interactivity and theme toggling.
 - **GitHub Pages**: For hosting the live demo.
 
+<<<<<<< HEAD
 ## Contact
+=======
+##  Contact
+>>>>>>> 4585478c5c6ccbbff01442d75e97d5e74348113f
 
 Feel free to reach out to me:
 
