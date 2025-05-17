@@ -475,8 +475,8 @@ body.dark-mode .quote footer {
   @media (max-width: 768px) {
     .skills-container {
       grid-template-columns: 1fr;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 10px;
+      margin-right: 50px;
       gap: 20px;
       padding-top: 20px;
       box-sizing: border-box;
