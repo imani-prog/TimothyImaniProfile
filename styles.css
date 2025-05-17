@@ -1228,7 +1228,7 @@ header {
 
   #Tools:hover {
     background: antiquewhite;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2),0 0 8px rgba(30, 144, 255, 0.8);
     cursor: pointer;
 }
   
@@ -1258,35 +1258,35 @@ header {
   }
   
   .tools-slider {
-    overflow-x: hidden;
-    width: 100%;
-    padding: 10px 0;
-    box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.tools-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: slide 20s linear infinite;
+  min-width: max-content;
+}
+
+.tools-track img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  
-  .tools-track {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    animation: slide 30s linear infinite;
-    min-width: max-content;
-    padding: 0 20px;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .tools-track img {
-    height: 50px;
-    width: auto;
-    transition: transform 0.3s;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+}
+
   
  /* Responsive icon size */
 @media (max-width: 768px) {
