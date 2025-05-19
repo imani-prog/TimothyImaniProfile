@@ -91,6 +91,7 @@ nav ul li a:hover {
     margin-left: 100px;
 }
 
+
 @media (max-width: 500px) {
     .profile-image {
         margin: 0 auto;
@@ -143,27 +144,6 @@ nav ul li a:hover {
     color: blue;
     font-style: normal !important;
 }
-.hero-text p {
-    font-size: 20px;
-    line-height: 1.6;
-}
-.input {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: inherit;
-}
-.hero-text p {
-    min-height: 40px;
-}
-
-.input {
-    display: inline-block;
-    min-width: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: inherit;
-    white-space: nowrap;
-}
 
 .hero-text p {
     font-size: 20px;
@@ -176,11 +156,12 @@ nav ul li a:hover {
 
 .input {
     display: inline-block;
-    min-width: 400px;
-    font-size: 20px;
+    min-width: 10px;
+    font-size: 30px;
     font-weight: bold;
     color: blue;
     white-space: nowrap;
+    margin-left: 20px;
 }
 
 @media (max-width: 400px) {
@@ -304,17 +285,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-#about {
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: 1rem;
-    max-width: 450px;
-    margin: 1.5rem;
-    font-style: normal !important;
-}
 #about h2 {
     text-align: center;
     font-size: 24px;
@@ -327,13 +297,14 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 2rem;
     gap: 1rem;
-    max-width: 450px;
-    margin: 1.5rem;
     display: flex;
-    margin-left: 150px;
     position: relative;
+    font-style: normal !important;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
 }
 
 /* Light mode styles for the #about section */
@@ -355,15 +326,11 @@ body.dark-mode #about p {
     color: black;
     text-align: left;
     margin: 0;
+   
 }
 
 /* Styling for the About Me section */
-#about {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: left;
-}
+
 
 /* Styling for the motivational quote */
 .quote {
