@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //typing effect
     new Typed(".input", {
-        strings: ["Database Administrator", "Data Engineer", "Software Developer"],
+        strings: ["Software Developer", "Database Administrator", "Data Engineer"],
         typeSpeed: 100,
         backSpeed: 100,
         loop: true
