@@ -1046,9 +1046,10 @@ body.dark-mode .project-title p {
 
 /* Enhanced Project Card Styling */
 .project-card {
-  background: antiquewhite;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: #F0F2F5;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   overflow: hidden;
   padding: 0;
@@ -1056,11 +1057,30 @@ body.dark-mode .project-title p {
   color: #333;
 }
 
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #0000ff;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleY(1);
+}
+
 .project-card:hover {
   background: antiquewhite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  cursor: pointer;
+  border-color: #0000ff;
   color: #333;
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 255, 0.3), 0 0 20px rgba(0, 0, 255, 0.2);
 }
 
 .project-card h3 {
