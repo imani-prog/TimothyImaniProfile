@@ -792,55 +792,114 @@ h2 {
   
   .education-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
   .education-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    width: 25%;
-    padding: 15px;
+    gap: 12px;
+    width: 280px;
+    min-height: 320px;
+    padding: 24px;
     background-color: #F0F2F5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #0000ff 0%, #4169E1 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+
+  .education-item:hover::before {
+    transform: scaleY(1);
   }
   
   .education-item:hover {
     background: antiquewhite;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 0.15);
+    transform: translateY(-8px);
     cursor: pointer;
-    
+    border-color: #0000ff;
   }
   
   .education-item i {
-    font-size: 40px;
+    font-size: 48px;
     color: #1a82f1;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .education-item:hover i {
+    color: #0000ff;
+    transform: scale(1.1);
+  }
+  
+  .education-details {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .education-details h3 {
-    font-size: 1.25rem;
-    margin: 0;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
     color: blue;
-    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
   }
   
   .education-details .institution {
     font-size: 1rem;
     color: #555;
-    margin: 0;
-    text-align: center;
+    margin: 0 0 4px 0;
+    font-weight: 500;
   }
   
   .education-details .years {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #777;
+    margin: 0 0 12px 0;
+    font-weight: 500;
+  }
+  
+  .education-details .description {
+    font-size: 0.85rem;
+    color: #666;
     margin: 0;
+    line-height: 1.5;
+    text-align: justify;
+    flex-grow: 1;
+  }
+
+  .education-details .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 8px 0 0 0;
     text-align: center;
+    line-height: 1.4;
+    font-style: italic;
   }
   @media (max-width: 768px) {
     #education {
@@ -849,14 +908,40 @@ h2 {
     }
   
     .education-container {
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
+      padding: 10px;
     }
   
     .education-item {
       width: 100%;
-      max-width: 300px;
+      max-width: 350px;
+      min-height: 280px;
+      padding: 20px;
+    }
+
+    .education-item i {
+      font-size: 40px;
+    }
+
+    .education-details h3 {
+      font-size: 1.2rem;
+    }
+
+    .education-details .description {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .education-item {
+      max-width: 100%;
+      padding: 16px;
+    }
+
+    .education-details h3 {
+      font-size: 1.1rem;
     }
   }
 
@@ -2146,7 +2231,7 @@ body.dark-mode .project-title p {
 
 .newsletter-btn {
   padding: 14px 24px;
-  background: linear-gradient(135deg, #0000ff 0%, #4169E1 100%);
+  background: linear-gradient(135deg, #0000ff, #4169E1);
   color: white;
   border: none;
   border-radius: 50px;
@@ -2317,16 +2402,7 @@ body.dark-mode .project-title p {
         display: inline-block;
         font-size: 14px;
         padding: 0.3rem;
-        margin-left: auto;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 0.5rem;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 0.5rem;
-        width: 100%;
+        margin-left:
     }
 
     nav ul li a {
