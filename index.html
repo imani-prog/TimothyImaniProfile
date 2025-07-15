@@ -557,36 +557,113 @@
         <div class="service-card">
           <h3>Software Architecture</h3>
           <p>Planning how software is built by organizing code into clear, simple parts that work well together and are easy to maintain or improve later.</p>
+          <button class="request-service-btn" data-service="Software Architecture">Request Service</button>
         </div>
         
         <div class="service-card">
           <h3>Database Management</h3>
           <p>Designing, optimizing, and maintaining efficient database systems to ensure data integrity and performance.</p>
+          <button class="request-service-btn" data-service="Database Management">Request Service</button>
         </div>
         
 
         <div class="service-card">
           <h3>Data Engineering</h3>
           <p>Building and optimizing data pipelines for scalable data processing, storage, and analysis.</p>
+          <button class="request-service-btn" data-service="Data Engineering">Request Service</button>
         </div>
     
         <div class="service-card">
           <h3>Web Development</h3>
           <p>Creating responsive, scalable web applications with modern best practices and technologies.</p>
+          <button class="request-service-btn" data-service="Web Development">Request Service</button>
         </div>
     
         <div class="service-card">
           <h3>System Optimization</h3>
           <p>Improving system efficiency, reducing load times, and ensuring seamless operations.</p>
+          <button class="request-service-btn" data-service="System Optimization">Request Service</button>
         </div>
 
         <div class="service-card">
           <h3>Data Analytics & Reporting</h3>
           <p>Transform raw data into actionable insights using dashboards and custom reports.</p>
+          <button class="request-service-btn" data-service="Data Analytics & Reporting">Request Service</button>
         </div>
       </div>
     </section>
     
+
+    <!-- Service Request Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Request Service</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="serviceRequestForm">
+            <div class="form-group">
+              <label for="serviceType">Service Type:</label>
+              <input type="text" id="serviceType" name="serviceType" readonly>
+            </div>
+            
+            <div class="form-group">
+              <label for="clientName">Your Name:</label>
+              <input type="text" id="clientName" name="clientName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="clientEmail">Email Address:</label>
+              <input type="email" id="clientEmail" name="clientEmail" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="clientPhone">Phone Number:</label>
+              <input type="tel" id="clientPhone" name="clientPhone">
+            </div>
+            
+            <div class="form-group">
+              <label for="projectBudget">Project Budget:</label>
+              <select id="projectBudget" name="projectBudget">
+                <option value="">Select Budget Range</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-2500">$1,000 - $2,500</option>
+                <option value="2500-5000">$2,500 - $5,000</option>
+                <option value="5000-10000">$5,000 - $10,000</option>
+                <option value="10000+">$10,000+</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="projectTimeline">Project Timeline:</label>
+              <select id="projectTimeline" name="projectTimeline">
+                <option value="">Select Timeline</option>
+                <option value="urgent">Urgent (Within 1 week)</option>
+                <option value="normal">Normal (1-4 weeks)</option>
+                <option value="flexible">Flexible (1-3 months)</option>
+                <option value="planning">Planning phase</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="projectDescription">Project Description:</label>
+              <textarea id="projectDescription" name="projectDescription" rows="4" placeholder="Please describe your project requirements, goals, and any specific needs..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="additionalInfo">Additional Information:</label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="3" placeholder="Any additional details, existing systems, or specific technologies you'd like to use..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="cancel-btn">Cancel</button>
+              <button type="submit" class="submit-btn">Send Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!--Contact Section -->
     <section id="contact">

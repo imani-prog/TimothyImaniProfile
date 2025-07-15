@@ -291,3 +291,96 @@ document.addEventListener('DOMContentLoaded', function() {
         projectObserver.observe(card);
     });
 });
+
+// Service Request Modal Functionality
+const serviceModal = document.getElementById('serviceModal');
+const serviceRequestForm = document.getElementById('serviceRequestForm');
+const serviceTypeInput = document.getElementById('serviceType');
+const closeModalBtn = document.querySelector('.close');
+const cancelBtn = document.querySelector('.cancel-btn');
+const requestServiceBtns = document.querySelectorAll('.request-service-btn');
+
+// Open modal when request service button is clicked
+requestServiceBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const serviceName = this.getAttribute('data-service');
+        serviceTypeInput.value = serviceName;
+        serviceModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+});
+
+// Close modal functions
+function closeModal() {
+    serviceModal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+    serviceRequestForm.reset(); // Clear form
+}
+
+// Close modal when X is clicked
+closeModalBtn.addEventListener('click', closeModal);
+
+// Close modal when cancel button is clicked
+cancelBtn.addEventListener('click', closeModal);
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === serviceModal) {
+        closeModal();
+    }
+});
+
+// Handle form submission
+serviceRequestForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(serviceRequestForm);
+    const serviceData = {
+        serviceType: formData.get('serviceType'),
+        clientName: formData.get('clientName'),
+        clientEmail: formData.get('clientEmail'),
+        clientPhone: formData.get('clientPhone'),
+        projectBudget: formData.get('projectBudget'),
+        projectTimeline: formData.get('projectTimeline'),
+        projectDescription: formData.get('projectDescription'),
+        additionalInfo: formData.get('additionalInfo')
+    };
+    
+    // Create email body
+    const emailBody = `
+Service Request Details:
+------------------------
+Service Type: ${serviceData.serviceType}
+Name: ${serviceData.clientName}
+Email: ${serviceData.clientEmail}
+Phone: ${serviceData.clientPhone || 'Not provided'}
+Budget: ${serviceData.projectBudget || 'Not specified'}
+Timeline: ${serviceData.projectTimeline || 'Not specified'}
+
+Project Description:
+${serviceData.projectDescription}
+
+Additional Information:
+${serviceData.additionalInfo || 'None'}
+    `;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:timothyimani9@gmail.com?subject=Service Request - ${serviceData.serviceType}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    alert('Thank you for your service request! Your email client will open to send the request.');
+    
+    // Close modal
+    closeModal();
+});
+
+// Add escape key functionality
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && serviceModal.style.display === 'block') {
+        closeModal();
+    }
+});
