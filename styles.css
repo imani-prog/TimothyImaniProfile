@@ -1464,37 +1464,66 @@ body.dark-mode .project-title p {
   .services-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 15px;
     justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
   .service-card {
-    background-color: rgba(51, 153, 255, 1);
-    border-radius: 10px;
-    padding: 1.5rem;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: #F0F2F5;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    width: 200px;
+    min-height: 140px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #0000ff;
+    transform: scaleY(0);
+    transform-origin: top;
     transition: transform 0.3s ease;
+  }
+
+  .service-card:hover::before {
+    transform: scaleY(1);
   }
   
   .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 8px rgba(30, 144, 255, 0.8);
-    transform: scale(1.02);
+    background: antiquewhite;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
+    transform: translateY(-2px);
     cursor: pointer;
-    
+    border-color: #0000ff;
   }
   
   .service-card h3 {
-    font-size: 22px;
-    margin-bottom: 0.8rem;
-    color: #1a1a1a;
+    font-size: 18px;
+    margin-bottom: 0.6rem;
+    color: blue;
+    font-weight: bold;
   }
   
   .service-card p {
-    font-size: 16px;
-    color: black;
-    line-height: 1.5;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
   }
   
 /* Contact Section */
