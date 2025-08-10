@@ -65,8 +65,8 @@ nav ul li a:hover {
 #hero {
     align-items: center;
     padding: 2rem 2rem;
-    background: white;
-    color: black;
+    /* background: white; */
+    /* color: black; */
     font-size: 30px;
     font-style: normal !important;
     min-height: 80vh;
@@ -187,7 +187,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    color: black;
+    /* color: black; */
     font-style: normal !important;
     padding: 0;
     background: none;
@@ -246,7 +246,7 @@ nav ul li a:hover {
 
 .hero-text .subtitle {
     font-size: 1.1rem;
-    color: #666;
+    /* color: #666; */
     margin-bottom: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -2026,14 +2026,14 @@ body.dark-mode .project-title p {
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px 0 20px;
+  padding: 40px 20px 0 20px;
 }
 
 .footer-main {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 60px;
-  margin-bottom: 50px;
+  gap: 40px;
+  margin-bottom: 30px;
 }
 
 .footer-brand h3 {
@@ -2063,14 +2063,14 @@ body.dark-mode .project-title p {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .footer-column h4 {
   font-size: 18px;
   font-weight: 600;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -2092,7 +2092,7 @@ body.dark-mode .project-title p {
 }
 
 .footer-column ul li {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .footer-column ul li a {
@@ -2111,7 +2111,7 @@ body.dark-mode .project-title p {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 15px;
   color: #cbd5e1;
 }
@@ -2122,16 +2122,16 @@ body.dark-mode .project-title p {
 }
 
 .footer-social {
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .social-icon-link {
@@ -2144,12 +2144,12 @@ body.dark-mode .project-title p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 12px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  min-width: 80px;
+  min-width: 70px;
 }
 
 .social-icon-wrapper:hover {
@@ -2180,7 +2180,7 @@ body.dark-mode .project-title p {
 .footer-newsletter {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .newsletter-content {
@@ -2191,14 +2191,14 @@ body.dark-mode .project-title p {
 .newsletter-content h4 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: white;
 }
 
 .newsletter-content p {
   font-size: 15px;
   color: #cbd5e1;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .newsletter-form {
@@ -2252,7 +2252,7 @@ body.dark-mode .project-title p {
 
 .footer-bottom {
   background: rgba(0, 0, 0, 0.2);
-  padding: 24px 0;
+  padding: 18px 0;
   position: relative;
   z-index: 2;
 }
@@ -2319,18 +2319,18 @@ body.dark-mode .project-title p {
 /* Responsive Design for Footer */
 @media (max-width: 768px) {
   .footer-content {
-    padding: 40px 20px 0 20px;
+    padding: 30px 20px 0 20px;
   }
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
     text-align: center;
   }
 
   .footer-links {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .footer-icons {
@@ -2339,8 +2339,8 @@ body.dark-mode .project-title p {
   }
 
   .social-icon-wrapper {
-    min-width: 70px;
-    padding: 12px;
+    min-width: 65px;
+    padding: 10px;
   }
 
   .newsletter-form {
