@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Timothy Imani Portfolio</title>
+        <link rel="stylesheet" href="./tailwind.build.css">
         <link rel="stylesheet" href="./styles.css">
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link rel="icon" href="./Assets/profile1.jpg" type="image/jpg">
@@ -19,56 +20,56 @@
           
         </style>
       </head>
-<body>
+<body class="bg-white text-slate-900 font-sans">
         <!-- Header Section -->
         <header>
-            <nav>
-                <h1>TIMOTHY IMANI 😎💻</h1>
-                <ul>
+      <nav class="fixed top-0 left-0 w-full h-16 z-[70] flex items-center justify-between px-6 bg-[#e6e6e6] text-black box-border">
+        <h1 class="text-primary font-bold text-lg">TIMOTHY IMANI 😎💻</h1>
+        <ul class="flex items-center gap-2 flex-wrap justify-end list-none m-0 p-0">
                     <!-- Navigation Links -->
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#about">About</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#skills">Skills</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#projects">Projects</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#education">Education</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#services">Services</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="#contact">Contact</a></li>
+          <li><a class="text-black text-[15px] font-semibold font-serif no-underline px-4 py-2 rounded-md border-2 border-transparent transition-colors duration-300 hover:border-primary" href="./Assets/Timothy_Imani_CV.pdf" download>Download CV</a></li>
                     <!-- Theme Toggle -->
-                    <li><button id="theme-toggle">🌙</button></li>
+          <li><button id="theme-toggle" class="bg-black text-white rounded-full px-4 py-2 text-[18px] cursor-pointer transition-transform duration-300">🌙</button></li>
                 </ul>
             </nav>
         </header>
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <img src="./Assets/profile1.jpg" alt="Profile Picture" class="profile-image">
-            <div class="hero-text">
-                <h2 id="greeting"></h2>
-                <h2>I'm <span>Timothy Imani</span></h2>
-                <p><span class="input"></span></p>
-                <p class="subtitle">Full-Stack Developer & Database Administrator passionate about building scalable web solutions and optimizing data systems.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="cta-button">
+    <section id="hero" class="flex items-center min-h-[70vh] px-6 py-8 overflow-hidden">
+      <div class="hero-content flex items-center justify-between gap-6 w-full max-w-[1200px] mx-auto">
+        <img src="./Assets/profile1.jpg" alt="Profile Picture" class="profile-image w-80 h-80 rounded-full object-cover object-center shadow-hero transition-transform duration-500 hover:scale-[1.05] hover:rotate-2 hover:shadow-[0_20px_50px_rgba(0,0,255,0.3),0_10px_30px_rgba(0,0,0,0.15)]">
+        <div class="hero-text flex flex-col text-left max-w-[600px]">
+          <h2 id="greeting" class="text-[2.8rem] font-bold mb-4"></h2>
+          <h2 class="text-[2.8rem] font-bold leading-tight mb-2">I'm <span class="text-primary">Timothy Imani</span></h2>
+          <p class="text-[18px] mb-2"><span class="input text-primary font-bold text-2xl ml-2"></span></p>
+          <p class="subtitle text-[1.1rem] text-slate-600 leading-relaxed mb-6 max-w-[90%]">Software Engineer, Database Administrator, and Web Developer — a tech enthusiast building scalable web apps, reliable data systems, and smooth user experiences.</p>
+          <div class="hero-cta flex flex-wrap gap-4 mt-6">
+            <a href="#projects" class="cta-button inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md text-white font-semibold text-sm bg-gradient-to-br from-primary to-primary-light shadow-[0_3px_12px_rgba(0,0,255,0.3)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,255,0.4)]">
                         <i class="fas fa-rocket"></i>
                         View My Work
                     </a>
-                    <a href="#contact" class="cta-button cta-secondary">
+            <a href="#contact" class="cta-button cta-secondary inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md font-semibold text-sm text-primary border-2 border-primary bg-transparent shadow-[0_3px_12px_rgba(0,0,255,0.2)] transition-transform duration-300 hover:bg-primary hover:text-white hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,255,0.4)]">
                         <i class="fas fa-envelope"></i>
                         Let's Connect
                     </a>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" class="social-link" title="LinkedIn" target="_blank">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="social-icon">
+          <div class="social-links flex flex-wrap gap-3 mt-6">
+            <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" class="social-link group w-10 h-10 rounded-full flex items-center justify-center p-2 transition-transform duration-300 hover:-translate-y-1" title="LinkedIn" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="social-icon w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <a href="https://github.com/imani-prog" class="social-link" title="GitHub" target="_blank">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Icon" class="social-icon">
+            <a href="https://github.com/imani-prog" class="social-link group w-10 h-10 rounded-full flex items-center justify-center p-2 transition-transform duration-300 hover:-translate-y-1" title="GitHub" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Icon" class="social-icon w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <a href="mailto:timothyimani6@gmail.com" class="social-link" title="Email">
-                        <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="social-icon">
+            <a href="mailto:timothyimani6@gmail.com" class="social-link group w-10 h-10 rounded-full flex items-center justify-center p-2 transition-transform duration-300 hover:-translate-y-1" title="Email">
+              <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="social-icon w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110">
                     </a>
-                    <a href="./Assets/Timothy_Imani_CV.pdf" class="social-link" title="Download CV" download>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download CV Icon" class="social-icon">
+            <a href="./Assets/Timothy_Imani_CV.pdf" class="social-link group w-10 h-10 rounded-full flex items-center justify-center p-2 transition-transform duration-300 hover:-translate-y-1" title="Download CV" download>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download CV Icon" class="social-icon w-6 h-6 object-contain transition-transform duration-300 group-hover:scale-110">
                     </a>
                 </div>
             </div>
@@ -77,37 +78,29 @@
     
     
         <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>As an aspiring Database Administrator with a strong interest in
-                Data Engineering and Web Development, I am passionate about managing
-                databases, optimizing data pipelines, and building scalable web solutions.
-                As an entry-level professional, I thrive on learning new technologies,
-                exploring innovative solutions, and continuously advancing my skills.
-                I enjoy solving complex problems, improving system efficiency,
-                and staying up-to-date with industry trends. Every challenge is an
-                opportunity to grow, and I’m excited to build impactful solutions that
-                drive efficiency and innovation.Thanks for visiting my portfolio—feel free to explore my work or reach out if you’d like to connect or collaborate!</p>
+        <section id="about" class="max-w-3xl mx-auto px-6 py-10 text-left flex flex-col gap-4">
+          <h2 class="text-2xl font-bold text-center font-display text-slate-900">About Me</h2>
+              <p class="text-[18px] font-serif leading-relaxed text-slate-900">As a Software Engineer and Web Developer with a Database Administrator mindset, I enjoy designing full-stack solutions that are fast, reliable, and easy to use. I build APIs, craft responsive interfaces, and tune databases and queries for performance and integrity. As an entry-level professional, I thrive on learning new technologies, exploring better architectures, and improving system efficiency. I am a tech enthusiast who loves solving complex problems and turning ideas into products. Thanks for visiting my portfolio—feel free to explore my work or reach out if you would like to connect or collaborate!</p>
 
-                <blockquote class="quote">
+            <blockquote class="quote mt-8 pl-6 border-l-4 border-primary italic text-lg text-slate-900">
                   "Data is not information. Information is not knowledge. Knowledge is not wisdom."
-                  <footer>&mdash; Clifford Stoll</footer>
+              <footer class="block text-right mt-2 text-base text-slate-900">&mdash; Clifford Stoll</footer>
               </blockquote>
         </section>
     
  <!-- Skills Section -->
-<section id="skills">
-  <h2>Technical Skills</h2>
+<section id="skills" class="px-6 py-12">
+  <h2 class="text-3xl font-bold text-center font-display bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-8">Technical Skills</h2>
 
   <!-- Frontend Development -->
-  <div class="skills-category">
-    <h3 class="category-title">Frontend Development</h3>
-    <div class="skills-container frontend">
-      <div class="skills-section">
-        <img src="Assets/PortableComputer.png" alt="frontend" class="skill-icon">
-        <div class="skill-content">
-          <h3>Core Frontend</h3>
-          <ul>
+  <div class="skills-category mb-10 px-4 text-center">
+    <h3 class="category-title text-xl font-bold text-primary inline-block border-l-4 border-primary pl-4 mb-4">Frontend Development</h3>
+    <div class="skills-container frontend flex flex-wrap gap-4 justify-center max-w-[1200px] mx-auto p-5">
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="Assets/PortableComputer.png" alt="frontend" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Core Frontend</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>HTML5</li>
             <li>CSS3 & SCSS</li>
             <li>JavaScript (ES6+)</li>
@@ -116,11 +109,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react frameworks" class="skill-icon">
-        <div class="skill-content">
-          <h3>Frontend Frameworks</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react frameworks" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Frontend Frameworks</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>React.js</li>
             <li>jQuery</li>
             <li>Bootstrap</li>
@@ -132,14 +125,14 @@
   </div>
 
   <!-- Backend Development -->
-  <div class="skills-category">
-    <h3 class="category-title">Backend Development</h3>
-    <div class="skills-container backend">
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" class="skill-icon">
-        <div class="skill-content">
-          <h3>Python Ecosystem</h3>
-          <ul>
+  <div class="skills-category mb-10 px-4 text-center">
+    <h3 class="category-title text-xl font-bold text-primary inline-block border-l-4 border-primary pl-4 mb-4">Backend Development</h3>
+    <div class="skills-container backend flex flex-wrap gap-4 justify-center max-w-[1200px] mx-auto p-5">
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Python Ecosystem</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Python (Core)</li>
             <li>Django</li>
             <li>Flask</li>
@@ -148,11 +141,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" class="skill-icon">
-        <div class="skill-content">
-          <h3>Java Ecosystem</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Java Ecosystem</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Java (Core)</li>
             <li>Spring Boot</li>
             <li>Spring Data JPA</li>
@@ -161,11 +154,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs" class="skill-icon">
-        <div class="skill-content">
-          <h3>Node.js & Others</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Node.js & Others</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Node.js</li>
             <li>Express.js</li>
             <li>C++</li>
@@ -177,14 +170,14 @@
   </div>
 
   <!-- Database & Data Engineering -->
-  <div class="skills-category">
-    <h3 class="category-title">Database & Data Engineering</h3>
-    <div class="skills-container database">
-      <div class="skills-section">
-        <img src="Assets/database.png" alt="database" class="skill-icon">
-        <div class="skill-content">
-          <h3>Database Systems</h3>
-          <ul>
+  <div class="skills-category mb-10 px-4 text-center">
+    <h3 class="category-title text-xl font-bold text-primary inline-block border-l-4 border-primary pl-4 mb-4">Database & Data Engineering</h3>
+    <div class="skills-container database flex flex-wrap gap-4 justify-center max-w-[1200px] mx-auto p-5">
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="Assets/database.png" alt="database" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Database Systems</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>SQL Server</li>
             <li>MySQL</li>
             <li>PostgreSQL</li>
@@ -193,12 +186,12 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="data engineering" class="skill-icon">
-        <div class="skill-content">
-          <h3>Data Engineering</h3>
-          <ul>
-            <li>Apache Kafka 😂😂🐪</li>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="data engineering" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Data Engineering</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
+            <li>Apache Kafka </li>
             <li>ETL Pipelines</li>
             <li>Data Warehousing</li>
             <li>SQL Optimization</li>
@@ -206,11 +199,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="microservices" class="skill-icon">
-        <div class="skill-content">
-          <h3>Java Microservices 😂😂🙌</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="microservices" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Java Microservices </h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Spring Cloud</li>
             <li>API Gateway</li>
             <li>Service Discovery</li>
@@ -222,14 +215,14 @@
   </div>
 
   <!-- DevOps & Tools -->
-  <div class="skills-category">
-    <h3 class="category-title">DevOps & Development Tools</h3>
-    <div class="skills-container devops">
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="version control" class="skill-icon">
-        <div class="skill-content">
-          <h3>Version Control & CI/CD</h3>
-          <ul>
+  <div class="skills-category mb-10 px-4 text-center">
+    <h3 class="category-title text-xl font-bold text-primary inline-block border-l-4 border-primary pl-4 mb-4">DevOps & Development Tools</h3>
+    <div class="skills-container devops flex flex-wrap gap-4 justify-center max-w-[1200px] mx-auto p-5">
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="version control" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Version Control & CI/CD</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Git & GitHub</li>
             <li>Docker</li>
             <li>GitHub Actions</li>
@@ -238,11 +231,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="cloud deployment" class="skill-icon">
-        <div class="skill-content">
-          <h3>Cloud & Deployment</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="cloud deployment" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Cloud & Deployment</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>Google Cloud Platform</li>
             <li>GCP Virtual Machines</li>
             <li>Cloud Deployment</li>
@@ -251,11 +244,11 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="development tools" class="skill-icon">
-        <div class="skill-content">
-          <h3>Development Environment</h3>
-          <ul>
+      <div class="skills-section group relative flex items-center text-left bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-4 min-w-[280px] max-w-[350px] flex-1 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-amber-50">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="development tools" class="skill-icon h-10 w-10 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+        <div class="skill-content flex-1">
+          <h3 class="text-[1.1em] font-bold text-primary text-center mb-2">Development Environment</h3>
+          <ul class="flex flex-wrap gap-2 list-none p-0 m-0">
             <li>VS Code</li>
             <li>IntelliJ IDEA</li>
             <li>Postman</li>
@@ -268,25 +261,25 @@
 </section>
 
     <!-- Tools and Technologies Section -->
-    <section id="Tools">
-        <div class="tools-container">
-          <div class="tools-title">
-            <h2>Tools and Technologies</h2>
-            <p>
+    <section id="Tools" class="px-6 py-12 max-w-[1200px] mx-auto text-center">
+        <div class="tools-container flex flex-col items-center w-full">
+          <div class="tools-title mb-8">
+            <h2 class="text-3xl font-display font-bold mb-4 bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent">Tools and Technologies</h2>
+            <p class="text-base text-slate-600 max-w-[600px] mx-auto mb-6">
               These are the tools and technologies I have experience with, which I have used in my projects and coursework. I am always eager to learn new tools and technologies to enhance my skills and improve my work.
             </p>
             
             <!-- Category Filter Buttons -->
-            <div class="tools-filter">
-              <button class="filter-btn active" data-category="all">All</button>
-              <button class="filter-btn" data-category="development">Development</button>
-              <button class="filter-btn" data-category="database">Database</button>
-              <button class="filter-btn" data-category="design">Design & Office</button>
-              <button class="filter-btn" data-category="deployment">Deployment</button>
+            <div class="tools-filter flex flex-wrap justify-center gap-2">
+              <button class="filter-btn active bg-gradient-to-br from-slate-50 to-slate-200 text-slate-600 border-2 border-slate-200 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition" data-category="all">All</button>
+              <button class="filter-btn bg-gradient-to-br from-slate-50 to-slate-200 text-slate-600 border-2 border-slate-200 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition" data-category="development">Development</button>
+              <button class="filter-btn bg-gradient-to-br from-slate-50 to-slate-200 text-slate-600 border-2 border-slate-200 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition" data-category="database">Database</button>
+              <button class="filter-btn bg-gradient-to-br from-slate-50 to-slate-200 text-slate-600 border-2 border-slate-200 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition" data-category="design">Design & Office</button>
+              <button class="filter-btn bg-gradient-to-br from-slate-50 to-slate-200 text-slate-600 border-2 border-slate-200 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition" data-category="deployment">Deployment</button>
             </div>
           </div>
       
-          <div class="tools-slider">
+          <div class="tools-slider w-full">
             <div class="tools-track">
               <!-- Development Tools -->
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" data-category="development" data-skill="95">
@@ -410,62 +403,62 @@
         </div>
       </section>
 <!-- Education section -->
-<section id="education">
-  <h2>My Education</h2>
-  <div class="education-container">
-    <div class="education-item">
-      <i class="bi bi-building"></i>
-      <div class="education-details">
-        <h3>Industrial Attachment - Software Engineering</h3>
-        <p class="institution">Systech Limited</p>
-        <p class="years">Jan 2025 - Present</p>
-        <p class="description">Practical training in Java Spring Boot development and DevOps on Google Cloud Platform. Gaining hands-on experience in enterprise software development, cloud deployment, and modern development practices.</p>
+<section id="education" class="max-w-[1200px] mx-auto px-6 py-10">
+  <h2 class="text-3xl font-bold text-center font-display mb-8">My Education</h2>
+  <div class="education-container flex flex-wrap justify-center gap-5 max-w-[1400px] mx-auto p-5">
+    <div class="education-item group relative flex flex-col items-center gap-3 w-[280px] min-h-[320px] p-6 bg-slate-100 border border-slate-200 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:bg-amber-50">
+      <i class="bi bi-building text-4xl text-sky-500 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary"></i>
+      <div class="education-details text-center flex flex-col justify-between flex-1">
+        <h3 class="text-[1.3rem] font-semibold text-primary mb-2">Industrial Attachment - Software Engineering</h3>
+        <p class="institution text-base text-slate-600 font-medium">Systech Limited</p>
+        <p class="years text-sm text-slate-500 font-medium mb-3">Jan 2025 - Present</p>
+        <p class="description text-sm text-slate-600 leading-relaxed text-center italic">Practical training in Java Spring Boot development and DevOps on Google Cloud Platform. Gaining hands-on experience in enterprise software development, cloud deployment, and modern development practices.</p>
       </div>
     </div>
-    <div class="education-item">
-      <i class="bi bi-mortarboard-fill"></i>
-      <div class="education-details">
-        <h3> Bsc Computer Science</h3>
-        <p class="institution">Machakos University</p>
-       <p class="years"> 2022 - Present </p>
-       <p class="description">Pursuing a comprehensive Bachelor's degree in Computer Science with focus on software engineering, data structures, algorithms, and system design. Building strong foundation in programming, database management, and software development methodologies.</p>
+    <div class="education-item group relative flex flex-col items-center gap-3 w-[280px] min-h-[320px] p-6 bg-slate-100 border border-slate-200 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:bg-amber-50">
+      <i class="bi bi-mortarboard-fill text-4xl text-sky-500 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary"></i>
+      <div class="education-details text-center flex flex-col justify-between flex-1">
+        <h3 class="text-[1.3rem] font-semibold text-primary mb-2"> Bsc Computer Science</h3>
+        <p class="institution text-base text-slate-600 font-medium">Machakos University</p>
+       <p class="years text-sm text-slate-500 font-medium mb-3"> 2022 - Present </p>
+       <p class="description text-sm text-slate-600 leading-relaxed text-center italic">Pursuing a comprehensive Bachelor's degree in Computer Science with focus on software engineering, data structures, algorithms, and system design. Building strong foundation in programming, database management, and software development methodologies.</p>
       </div>
     </div>
-    <div class="education-item">
-      <i class="bi bi-mortarboard-fill"></i>
-      <div class="education-details">
-        <h3>Data Engineering Course </h3>
-        <p class="institution">DataCamp Online</p>
-        <p class="years">Feb 2025 - Present </p>
-        <p class="description">Comprehensive online certification program covering data pipeline development, ETL processes, data warehousing, and big data technologies. Learning modern data engineering tools and best practices for scalable data solutions.</p>
+    <div class="education-item group relative flex flex-col items-center gap-3 w-[280px] min-h-[320px] p-6 bg-slate-100 border border-slate-200 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:bg-amber-50">
+      <i class="bi bi-mortarboard-fill text-4xl text-sky-500 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary"></i>
+      <div class="education-details text-center flex flex-col justify-between flex-1">
+        <h3 class="text-[1.3rem] font-semibold text-primary mb-2">Data Engineering Course </h3>
+        <p class="institution text-base text-slate-600 font-medium">DataCamp Online</p>
+        <p class="years text-sm text-slate-500 font-medium mb-3">Feb 2025 - Present </p>
+        <p class="description text-sm text-slate-600 leading-relaxed text-center italic">Comprehensive online certification program covering data pipeline development, ETL processes, data warehousing, and big data technologies. Learning modern data engineering tools and best practices for scalable data solutions.</p>
       </div>
     </div>
-    <div class="education-item">
-      <i class="bi bi-mortarboard-fill"></i>
-      <div class="education-details">
-        <h3>Software Engineering</h3>
-        <p class="institution">Power Learn Project </p>
-        <p class="years">Feb 2025 - Present </p>
-        <p class="description">Intensive software engineering bootcamp focused on practical programming skills, version control, agile methodologies, and collaborative development. Emphasizing real-world project experience and industry best practices.</p>
+    <div class="education-item group relative flex flex-col items-center gap-3 w-[280px] min-h-[320px] p-6 bg-slate-100 border border-slate-200 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:bg-amber-50">
+      <i class="bi bi-mortarboard-fill text-4xl text-sky-500 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:text-primary"></i>
+      <div class="education-details text-center flex flex-col justify-between flex-1">
+        <h3 class="text-[1.3rem] font-semibold text-primary mb-2">Software Engineering</h3>
+        <p class="institution text-base text-slate-600 font-medium">Power Learn Project </p>
+        <p class="years text-sm text-slate-500 font-medium mb-3">Feb 2025 - Present </p>
+        <p class="description text-sm text-slate-600 leading-relaxed text-center italic">Intensive software engineering bootcamp focused on practical programming skills, version control, agile methodologies, and collaborative development. Emphasizing real-world project experience and industry best practices.</p>
       </div>
     </div>
   </div>
 </section>
     <!-- Projects Section -->
-    <section id="projects">
-        <div class="project-title">
-            <h2>Sample Projects</h2>
-            <p>As a junior professional, I’ve worked on projects involving database management, data engineering, and Software development. My experience includes automating data workflows, building interactive systems, and creating responsive websites that ensure seamless user experiences and efficient back-end processes with smooth database integration.</p>
-        </div>
-        <div class="project-grid">
+    <section id="projects" class="max-w-[1200px] mx-auto px-6 py-12 text-center font-serif text-[18px] leading-relaxed text-slate-900">
+      <div class="project-title text-center max-w-[900px] mx-auto mb-6">
+        <h2 class="text-3xl font-display font-bold mb-2">Sample Projects</h2>
+        <p class="text-base leading-relaxed">As a junior professional, I’ve worked on projects involving database management, data engineering, and Software development. My experience includes automating data workflows, building interactive systems, and creating responsive websites that ensure seamless user experiences and efficient back-end processes with smooth database integration.</p>
+      </div>
+      <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-6">
 
-            <div class="project-card">
-                <h3>MediLink - Healthcare Platform</h3>
-                <img src="./Assets/Medilink.png" alt="MediLink Healthcare Platform" class="project-image">
+        <div class="project-card bg-slate-100 border border-slate-200 rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-display font-semibold text-primary px-6 pt-5 pb-4">MediLink - Healthcare Platform</h3>
+          <img src="./Assets/Medilink.png" alt="MediLink Healthcare Platform" class="project-image w-full h-48 object-cover">
                 
                 <!-- Expandable Content -->
-                <div class="project-expandable">
-                    <button class="expand-btn" onclick="toggleProjectDetails(this)">
+                <div class="project-expandable px-6">
+                  <button class="expand-btn w-full flex items-center justify-between text-sm font-medium text-slate-700 border border-slate-300 rounded-xl px-4 py-3 mt-4 mb-4 bg-black/10 backdrop-blur-sm transition" onclick="toggleProjectDetails(this)">
                         <span class="btn-text">View Details</span>
                         <i class="fas fa-chevron-down expand-icon"></i>
                     </button>
@@ -486,49 +479,31 @@
                     </div>
                 </div>
                 
-                <div class="project-links">
-                    <p>Explore the project on <a href="" target="_blank">GitHub</a> or visit the <a href="https://medilink-public.vercel.app" target="_blank">live platform</a>.</p>
+                <div class="project-links px-6 pb-6">
+                  <p class="text-sm text-slate-700">Explore the project on <a class="text-primary font-medium hover:underline" href="" target="_blank">GitHub</a> or visit the <a class="text-primary font-medium hover:underline" href="https://medilink-public.vercel.app" target="_blank">live platform</a>.</p>
                 </div>
             </div>
             
-            <div class="project-card">
-                <h3>Sample Data Importing Using Python</h3>
-                <img src="./Assets/background2.jpg" alt="Data Importing Project" class="project-image">
-                
-                <!-- Expandable Content -->
-                <div class="project-expandable">
-                    <button class="expand-btn" onclick="toggleProjectDetails(this)">
-                        <span class="btn-text">View Details</span>
-                        <i class="fas fa-chevron-down expand-icon"></i>
-                    </button>
-                    
-                    <div class="project-details">
-                        <div class="tech-stack">
-                            <h4>Tech Stack</h4>
-                            <div class="tech-badges">
-                                <span class="tech-badge python">Python</span>
-                                <span class="tech-badge streamlit">Streamlit</span>
-                                <span class="tech-badge pandas">Pandas</span>
-                                <span class="tech-badge data">Data Processing</span>
-                                <span class="tech-badge visualization">Data Visualization</span>
-                            </div>
-                        </div>
-                        <p class="project-description">A comprehensive data importing and processing project featuring an interactive Streamlit dashboard for expense tracking and data visualization. Includes CSV/JSON data processing, interactive charts, and real-time data analysis capabilities.</p>
-                    </div>
-                </div>
-                
-                <div class="project-links">
-                    <p>Explore the project on <a href="https://github.com/imani-prog/data_importing.git" target="_blank">GitHub</a> or try the <a href="https://imani-prog-data-importing-dashboard-jhzokj.streamlit.app/" target="_blank">deployed app</a>.</p>
+              <div class="project-card bg-slate-100 border border-slate-200 rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+                <h3 class="text-lg font-display font-semibold text-primary px-6 pt-5 pb-4">Inspire Me</h3>
+                <img src="./Assets/InspireMe.png" alt="Inspire Me Project" class="project-image w-full h-48 object-cover">
+                <div class="px-6 pt-4 pb-6">
+                  <p class="text-sm text-slate-700 leading-relaxed">Daily motivational quotes app for coding inspiration <br>
+                      Integrated with AI to deliver personalized motivation during coding sessions.<br>
+                      Simple and clean interface for daily motivation during coding sessions.<br>
+                      Frontend application for getting inspired while debugging.<br>
+                      <a href="https://inspire-me-one.vercel.app/" target="_blank" style="color: #0077cc;">Live App</a> | <a href="https://github.com/imani-prog/InspireMeFrontend.git" target="_blank" style="color: #0077cc;">GitHub</a>
+                  </p>
                 </div>
             </div>
             
-            <div class="project-card">
-                <h3>Watulivu Barber Shop</h3>
-                <img src="./Assets/watulivu.jpg" alt="Barber Shop Project" class="project-image">
+              <div class="project-card bg-slate-100 border border-slate-200 rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+                <h3 class="text-lg font-display font-semibold text-primary px-6 pt-5 pb-4">Watulivu Barber Shop</h3>
+                <img src="./Assets/watulivu.jpg" alt="Barber Shop Project" class="project-image w-full h-48 object-cover">
                 
                 <!-- Expandable Content -->
-                <div class="project-expandable">
-                    <button class="expand-btn" onclick="toggleProjectDetails(this)">
+                <div class="project-expandable px-6">
+                  <button class="expand-btn w-full flex items-center justify-between text-sm font-medium text-slate-700 border border-slate-300 rounded-xl px-4 py-3 mt-4 mb-4 bg-black/10 backdrop-blur-sm transition" onclick="toggleProjectDetails(this)">
                         <span class="btn-text">View Details</span>
                         <i class="fas fa-chevron-down expand-icon"></i>
                     </button>
@@ -548,18 +523,18 @@
                     </div>
                 </div>
                 
-                <div class="project-links">
-                    <p>Visit the <a href="https://imani-prog.github.io/BarberShop/" target="_blank">live site</a> or check out the <a href="https://github.com/imani-prog/BarberShop.git" target="_blank">GitHub repository</a>.</p>
+                <div class="project-links px-6 pb-6">
+                  <p class="text-sm text-slate-700">Visit the <a class="text-primary font-medium hover:underline" href="https://imani-prog.github.io/BarberShop/" target="_blank">live site</a> or check out the <a class="text-primary font-medium hover:underline" href="https://github.com/imani-prog/BarberShop.git" target="_blank">GitHub repository</a>.</p>
                 </div>
             </div>
             
-            <div class="project-card">
-                <h3>Tora Dental Clinic</h3>
-                <img src="./Assets/tora.png" alt="Tora Dental Clinic" class="project-image">
+              <div class="project-card bg-slate-100 border border-slate-200 rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+                <h3 class="text-lg font-display font-semibold text-primary px-6 pt-5 pb-4">Tora Dental Clinic</h3>
+                <img src="./Assets/tora.png" alt="Tora Dental Clinic" class="project-image w-full h-48 object-cover">
                 
                 <!-- Expandable Content -->
-                <div class="project-expandable">
-                    <button class="expand-btn" onclick="toggleProjectDetails(this)">
+                <div class="project-expandable px-6">
+                  <button class="expand-btn w-full flex items-center justify-between text-sm font-medium text-slate-700 border border-slate-300 rounded-xl px-4 py-3 mt-4 mb-4 bg-black/10 backdrop-blur-sm transition" onclick="toggleProjectDetails(this)">
                         <span class="btn-text">View Details</span>
                         <i class="fas fa-chevron-down expand-icon"></i>
                     </button>
@@ -579,60 +554,60 @@
                     </div>
                 </div>
                 
-                <div class="project-links">
-                    <p>Visit the <a href="https://imani-prog.github.io/ToraDentalClinic/" target="_blank">live website</a> or check out the <a href="https://github.com/imani-prog/ToraDentalClinic.git" target="_blank">GitHub repository</a>.</p>
+                <div class="project-links px-6 pb-6">
+                    <p class="text-sm text-slate-700">Visit the <a class="text-primary font-medium hover:underline" href="https://imani-prog.github.io/ToraDentalClinic/" target="_blank">live website</a> or check out the <a class="text-primary font-medium hover:underline" href="https://github.com/imani-prog/ToraDentalClinic.git" target="_blank">GitHub repository</a>.</p>
                 </div>
             </div>
         </div>
-        <div class="more-projects">
+        <div class="more-projects flex justify-center items-center py-8">
           <a href="https://github.com/imani-prog" target="_blank" title="GitHub">
-            <button class="more-projects-button">View More Projects</button>
+            <button class="more-projects-button bg-sky-400 text-white font-semibold rounded-full px-6 py-3 shadow-lg">View More Projects</button>
           </a>
         </div>
     </section>
     <!-- Services Section -->
-    <section id="services">
-      <div class="services-title">
-        <h2>Services</h2>
-        <p>With expertise in database management, data engineering, and web development, I provide solutions that help businesses thrive and stay ahead of the competition.
+    <section id="services" class="px-6 py-12 text-center font-serif">
+      <div class="services-title max-w-[800px] mx-auto mb-8">
+        <h2 class="text-3xl font-display font-bold mb-6">Services</h2>
+        <p class="text-base leading-relaxed">With expertise in database management, data engineering, and web development, I provide solutions that help businesses thrive and stay ahead of the competition.
           Explore my services to discover how I can support your growth and success online.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Software Architecture</h3>
-          <p>Planning how software is built by organizing code into clear, simple parts that work well together and are easy to maintain or improve later.</p>
-          <button class="request-service-btn" data-service="Software Architecture">Request Service</button>
+      <div class="services-grid flex flex-wrap gap-4 justify-center max-w-[1000px] mx-auto">
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Software Architecture</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Planning how software is built by organizing code into clear, simple parts that work well together and are easy to maintain or improve later.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="Software Architecture">Request Service</button>
         </div>
         
-        <div class="service-card">
-          <h3>Database Management</h3>
-          <p>Designing, optimizing, and maintaining efficient database systems to ensure data integrity and performance.</p>
-          <button class="request-service-btn" data-service="Database Management">Request Service</button>
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Database Management</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Designing, optimizing, and maintaining efficient database systems to ensure data integrity and performance.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="Database Management">Request Service</button>
         </div>
         
 
-        <div class="service-card">
-          <h3>Data Engineering</h3>
-          <p>Building and optimizing data pipelines for scalable data processing, storage, and analysis.</p>
-          <button class="request-service-btn" data-service="Data Engineering">Request Service</button>
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Data Engineering</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Building and optimizing data pipelines for scalable data processing, storage, and analysis.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="Data Engineering">Request Service</button>
         </div>
     
-        <div class="service-card">
-          <h3>Web Development</h3>
-          <p>Creating responsive, scalable web applications with modern best practices and technologies.</p>
-          <button class="request-service-btn" data-service="Web Development">Request Service</button>
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Web Development</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Creating responsive, scalable web applications with modern best practices and technologies.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="Web Development">Request Service</button>
         </div>
     
-        <div class="service-card">
-          <h3>System Optimization</h3>
-          <p>Improving system efficiency, reducing load times, and ensuring seamless operations.</p>
-          <button class="request-service-btn" data-service="System Optimization">Request Service</button>
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">System Optimization</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Improving system efficiency, reducing load times, and ensuring seamless operations.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="System Optimization">Request Service</button>
         </div>
 
-        <div class="service-card">
-          <h3>Data Analytics & Reporting</h3>
-          <p>Transform raw data into actionable insights using dashboards and custom reports.</p>
-          <button class="request-service-btn" data-service="Data Analytics & Reporting">Request Service</button>
+        <div class="service-card group relative bg-slate-100 border border-slate-200 rounded-lg shadow-sm p-5 w-[200px] min-h-[140px] flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-amber-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Data Analytics & Reporting</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">Transform raw data into actionable insights using dashboards and custom reports.</p>
+          <button class="request-service-btn mt-3 self-start bg-gradient-to-br from-primary to-primary-light text-white text-xs font-semibold rounded-full px-4 py-2 transition-transform duration-300 hover:-translate-y-0.5" data-service="Data Analytics & Reporting">Request Service</button>
         </div>
       </div>
     </section>
@@ -710,73 +685,73 @@
     </div>
 
     <!--Contact Section -->
-    <section id="contact">
-      <div class="contact-header">
-        <h2>Let's Work Together</h2>
-        <p>Ready to turn your ideas into reality? Whether you need database optimization, web development, or data engineering solutions, I'm here to help bring your project to life.</p>
+    <section id="contact" class="relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-200 py-20">
+      <div class="contact-header text-center max-w-[800px] mx-auto mb-16 px-6">
+        <h2 class="text-4xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-5">Let's Work Together</h2>
+        <p class="text-base text-slate-500 leading-relaxed max-w-[600px] mx-auto">Ready to turn your ideas into reality? Whether you need database optimization, web development, or data engineering solutions, I'm here to help bring your project to life.</p>
       </div>
 
-      <div class="contact-content">
+      <div class="contact-content max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16">
         <!-- Contact Info Cards -->
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-icon">
+        <div class="contact-info grid gap-5">
+          <div class="contact-card group relative bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 hover:bg-amber-50">
+            <div class="contact-icon w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
               <i class="fas fa-envelope"></i>
             </div>
-            <h3>Email Me</h3>
-            <p>Drop me a line anytime</p>
-            <a href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a>
+            <h3 class="text-xl font-semibold text-slate-800 mb-2">Email Me</h3>
+            <p class="text-sm text-slate-500 mb-3">Drop me a line anytime</p>
+            <a class="text-primary font-semibold hover:text-primary-light" href="mailto:timothyimani6@gmail.com">timothyimani6@gmail.com</a>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-icon">
+          <div class="contact-card group relative bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 hover:bg-amber-50">
+            <div class="contact-icon w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
               <i class="fas fa-phone"></i>
             </div>
-            <h3>Call or Text</h3>
-            <p>Let's have a conversation</p>
-            <a href="tel:+254743669252">+254 743 669 252</a>
+            <h3 class="text-xl font-semibold text-slate-800 mb-2">Call or Text</h3>
+            <p class="text-sm text-slate-500 mb-3">Let's have a conversation</p>
+            <a class="text-primary font-semibold hover:text-primary-light" href="tel:+254743669252">+254 743 669 252</a>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-icon">
+          <div class="contact-card group relative bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 hover:bg-amber-50">
+            <div class="contact-icon w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
               <i class="fab fa-whatsapp"></i>
             </div>
-            <h3>WhatsApp</h3>
-            <p>Quick chat on WhatsApp</p>
-            <a href="https://wa.me/254743669252" target="_blank">Message Me</a>
+            <h3 class="text-xl font-semibold text-slate-800 mb-2">WhatsApp</h3>
+            <p class="text-sm text-slate-500 mb-3">Quick chat on WhatsApp</p>
+            <a class="text-primary font-semibold hover:text-primary-light" href="https://wa.me/254743669252" target="_blank">Message Me</a>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-icon">
+          <div class="contact-card group relative bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 hover:bg-amber-50">
+            <div class="contact-icon w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
               <i class="fab fa-linkedin"></i>
             </div>
-            <h3>LinkedIn</h3>
-            <p>Professional networking</p>
-            <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">Connect</a>
+            <h3 class="text-xl font-semibold text-slate-800 mb-2">LinkedIn</h3>
+            <p class="text-sm text-slate-500 mb-3">Professional networking</p>
+            <a class="text-primary font-semibold hover:text-primary-light" href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank">Connect</a>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="contact-form-container">
-          <h3>Send Me a Message</h3>
-          <p class="form-subtitle">I'll get back to you within 24 hours</p>
+        <div class="contact-form-container bg-white/95 backdrop-blur-lg border border-white/30 rounded-2xl p-10 shadow-xl">
+          <h3 class="text-2xl font-bold text-slate-800 mb-2 text-center">Send Me a Message</h3>
+          <p class="form-subtitle text-center text-slate-500 mb-8">I'll get back to you within 24 hours</p>
           
-          <form id="contact-form" action="https://formspree.io/f/mrbpyrjp" method="POST">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <form id="contact-form" action="https://formspree.io/f/mrbpyrjp" method="POST" class="space-y-6">
+            <div class="form-group mb-6 relative">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="name">Full Name *</label>
+              <input class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl text-base bg-white/80 transition focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" type="text" id="name" name="name" placeholder="Enter your full name" required>
               <span class="error-message" id="name-error"></span>
             </div>
 
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <div class="form-group mb-6 relative">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="email">Email Address *</label>
+              <input class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl text-base bg-white/80 transition focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" type="email" id="email" name="email" placeholder="Enter your email address" required>
               <span class="error-message" id="email-error"></span>
             </div>
 
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject">
+            <div class="form-group mb-6 relative">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="subject">Subject</label>
+              <select class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl text-base bg-white/80 transition focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" id="subject" name="subject">
                 <option value="">Select a topic</option>
                 <option value="web-development">Web Development</option>
                 <option value="database-admin">Database Administration</option>
@@ -787,9 +762,9 @@
               </select>
             </div>
 
-            <div class="form-group">
-              <label for="budget">Project Budget (Optional)</label>
-              <select id="budget" name="budget">
+            <div class="form-group mb-6 relative">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="budget">Project Budget (Optional)</label>
+              <select class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl text-base bg-white/80 transition focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" id="budget" name="budget">
                 <option value="">Select budget range</option>
                 <option value="under-1000">Under $1,000</option>
                 <option value="1000-5000">$1,000 - $5,000</option>
@@ -799,25 +774,25 @@
               </select>
             </div>
 
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and any specific requirements..." required rows="6"></textarea>
+            <div class="form-group mb-6 relative">
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="message">Message *</label>
+              <textarea class="w-full px-4 py-3 border-2 border-slate-200 rounded-xl text-base bg-white/80 transition focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 min-h-[120px]" id="message" name="message" placeholder="Tell me about your project, timeline, and any specific requirements..." required rows="6"></textarea>
               <span class="error-message" id="message-error"></span>
-              <div class="character-count">
+              <div class="character-count text-right text-xs text-slate-500 mt-1">
                 <span id="char-count">0</span>/500 characters
               </div>
             </div>
 
-            <div class="form-group checkbox-group">
-              <label class="checkbox-label">
+            <div class="form-group checkbox-group mb-6 relative">
+              <label class="checkbox-label flex items-start gap-3 cursor-pointer text-sm text-slate-600 leading-relaxed">
                 <input type="checkbox" name="newsletter" id="newsletter">
                 <span class="checkmark"></span>
                 Subscribe to my newsletter for tech updates and project showcases
               </label>
             </div>
 
-            <div class="form-submit">
-              <button type="submit" id="submit-btn">
+            <div class="form-submit text-center mt-8">
+              <button type="submit" id="submit-btn" class="bg-gradient-to-br from-primary to-primary-light text-white rounded-full px-12 py-4 text-base font-semibold min-w-[180px] transition hover:-translate-y-1 hover:shadow-xl">
                 <span class="btn-text">Send Message</span>
                 <span class="btn-loading" style="display: none;">
                   <i class="fas fa-spinner fa-spin"></i> Sending...
@@ -840,111 +815,111 @@
       </div>
 
       <!-- Quick Stats -->
-      <div class="contact-stats">
-        <div class="stat-item">
-          <span class="stat-number">24h</span>
-          <span class="stat-label">Response Time</span>
+      <div class="contact-stats grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1000px] mx-auto mt-16 px-6">
+        <div class="stat-item text-center bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg hover:bg-amber-50">
+          <span class="stat-number block text-3xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-2">24h</span>
+          <span class="stat-label block text-sm text-slate-500 font-medium">Response Time</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">50+</span>
-          <span class="stat-label">Projects Completed</span>
+        <div class="stat-item text-center bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg hover:bg-amber-50">
+          <span class="stat-number block text-3xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-2">50+</span>
+          <span class="stat-label block text-sm text-slate-500 font-medium">Projects Completed</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Client Satisfaction</span>
+        <div class="stat-item text-center bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg hover:bg-amber-50">
+          <span class="stat-number block text-3xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-2">100%</span>
+          <span class="stat-label block text-sm text-slate-500 font-medium">Client Satisfaction</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">0.5+</span>
-          <span class="stat-label">Years Experience</span>
+        <div class="stat-item text-center bg-white/90 backdrop-blur-md border border-white/20 rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg hover:bg-amber-50">
+          <span class="stat-number block text-3xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-2">0.5+</span>
+          <span class="stat-label block text-sm text-slate-500 font-medium">Years Experience</span>
         </div>
       </div>
     </section>
   
 
     <!-- Footer Section -->
-    <footer id="footer">
-      <div class="footer-content">
-        <div class="footer-main">
+    <footer id="footer" class="bg-gradient-to-br from-slate-800 to-slate-700 text-white mt-16">
+      <div class="footer-content max-w-[1200px] mx-auto px-6 pt-10">
+        <div class="footer-main grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 mb-8">
           <div class="footer-brand">
-            <h3>Timothy Imani</h3>
-            <p class="footer-tagline">Building Tomorrow's Solutions Today</p>
-            <p class="footer-description">
-              Passionate Full-Stack Developer & Database Administrator dedicated to creating 
-              innovative solutions that drive business growth and efficiency.
+            <h3 class="text-3xl font-bold bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent mb-3">Timothy Imani</h3>
+            <p class="footer-tagline text-lg font-semibold text-sky-400 mb-4">Building Tomorrow's Solutions Today</p>
+            <p class="footer-description text-base text-slate-300 leading-relaxed max-w-[400px]">
+              Software Engineer and Database Administrator focused on building scalable web products
+              and dependable data systems that drive growth and efficiency.
             </p>
           </div>
 
-          <div class="footer-links">
+          <div class="footer-links grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="footer-column">
-              <h4>Services</h4>
-              <ul>
-                <li><a href="#services">Web Development</a></li>
-                <li><a href="#services">Database Management</a></li>
-                <li><a href="#services">Data Engineering</a></li>
-                <li><a href="#services">System Optimization</a></li>
+              <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
+              <ul class="list-none p-0 m-0">
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#services">Web Development</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#services">Database Management</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#services">Data Engineering</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#services">System Optimization</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
+              <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <ul class="list-none p-0 m-0">
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#about">About Me</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#skills">Technical Skills</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#projects">Projects</a></li>
+                <li><a class="text-slate-300 no-underline text-sm transition hover:text-sky-400" href="#education">Education</a></li>
               </ul>
             </div>
 
             <div class="footer-column">
-              <h4>Get In Touch</h4>
+              <h4 class="text-lg font-semibold text-white mb-4">Get In Touch</h4>
               <div class="footer-contact">
-                <p><i class="fas fa-envelope"></i> timothyimani6@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +254 743 669 252</p>
-                <p><i class="fas fa-map-marker-alt"></i> Kenya</p>
+                <p class="flex items-center gap-3 text-sm text-slate-300 mb-2"><i class="fas fa-envelope"></i> timothyimani6@gmail.com</p>
+                <p class="flex items-center gap-3 text-sm text-slate-300 mb-2"><i class="fas fa-phone"></i> +254 743 669 252</p>
+                <p class="flex items-center gap-3 text-sm text-slate-300 mb-2"><i class="fas fa-map-marker-alt"></i> Kenya</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="footer-social">
-          <div class="footer-icons">
-            <a href="mailto:timothyimani6@gmail.com" target="_blank" title="Email" class="social-icon-link">
-              <div class="social-icon-wrapper">
-                <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="footer-icon">
-                <span class="social-label">Email</span>
+        <div class="footer-social py-5 border-y border-white/10 mb-5">
+          <div class="footer-icons flex justify-center gap-5 flex-wrap">
+            <a href="mailto:timothyimani6@gmail.com" target="_blank" title="Email" class="social-icon-link no-underline text-inherit transition">
+              <div class="social-icon-wrapper flex flex-col items-center p-3 rounded-xl bg-white/5 border border-white/10 transition hover:bg-amber-50 hover:shadow-lg min-w-[70px]">
+                <img src="Assets/icons8-gmail-48.png" alt="Gmail Icon" class="footer-icon w-7 h-7 mb-2">
+                <span class="social-label text-xs font-medium text-slate-300">Email</span>
               </div>
             </a>
             
-            <a href="https://github.com/imani-prog" target="_blank" title="GitHub" class="social-icon-link">
-              <div class="social-icon-wrapper">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Icon" class="footer-icon">
-                <span class="social-label">GitHub</span>
+            <a href="https://github.com/imani-prog" target="_blank" title="GitHub" class="social-icon-link no-underline text-inherit transition">
+              <div class="social-icon-wrapper flex flex-col items-center p-3 rounded-xl bg-white/5 border border-white/10 transition hover:bg-amber-50 hover:shadow-lg min-w-[70px]">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Icon" class="footer-icon w-7 h-7 mb-2">
+                <span class="social-label text-xs font-medium text-slate-300">GitHub</span>
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank" title="LinkedIn" class="social-icon-link">
-              <div class="social-icon-wrapper">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="footer-icon">
-                <span class="social-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/timothy-imani-5677ba253" target="_blank" title="LinkedIn" class="social-icon-link no-underline text-inherit transition">
+              <div class="social-icon-wrapper flex flex-col items-center p-3 rounded-xl bg-white/5 border border-white/10 transition hover:bg-amber-50 hover:shadow-lg min-w-[70px]">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="footer-icon w-7 h-7 mb-2">
+                <span class="social-label text-xs font-medium text-slate-300">LinkedIn</span>
               </div>
             </a>
 
-            <a href="https://wa.me/254743669252" target="_blank" title="WhatsApp" class="social-icon-link">
-              <div class="social-icon-wrapper">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="footer-icon">
-                <span class="social-label">WhatsApp</span>
+            <a href="https://wa.me/254743669252" target="_blank" title="WhatsApp" class="social-icon-link no-underline text-inherit transition">
+              <div class="social-icon-wrapper flex flex-col items-center p-3 rounded-xl bg-white/5 border border-white/10 transition hover:bg-amber-50 hover:shadow-lg min-w-[70px]">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="footer-icon w-7 h-7 mb-2">
+                <span class="social-label text-xs font-medium text-slate-300">WhatsApp</span>
               </div>
             </a>
           </div>
         </div>
 
-        <div class="footer-newsletter">
-          <div class="newsletter-content">
-            <h4>Stay Updated</h4>
-            <p>Get the latest updates on new projects and tech insights</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email" class="newsletter-input">
-              <button type="submit" class="newsletter-btn">
+        <div class="footer-newsletter flex justify-center mb-6">
+          <div class="newsletter-content text-center max-w-[500px]">
+            <h4 class="text-xl font-semibold text-white mb-2">Stay Updated</h4>
+            <p class="text-sm text-slate-300 mb-4">Get the latest updates on new projects and tech insights</p>
+            <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-[400px] mx-auto">
+              <input type="email" placeholder="Enter your email" class="newsletter-input flex-1 px-4 py-3 border-2 border-white/20 rounded-full bg-white/10 text-white text-sm transition focus:outline-none focus:border-sky-400">
+              <button type="submit" class="newsletter-btn px-6 py-3 bg-gradient-to-br from-primary to-primary-light text-white rounded-full font-semibold flex items-center justify-center gap-2 transition hover:-translate-y-1 hover:shadow-lg">
                 <i class="fas fa-paper-plane"></i>
                 Subscribe
               </button>
@@ -953,19 +928,19 @@
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p>&copy; 2025 Timothy Imani. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
-            <a href="terms-and-conditions.html" class="footer-legal-link">Terms of Service</a>
-            <a href="./Assets/Timothy_Imani_CV.pdf" download class="footer-legal-link">Download CV</a>
+      <div class="footer-bottom bg-black/20 py-4">
+        <div class="footer-bottom-content max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center">
+          <p class="text-sm text-slate-400">&copy; 2025 Timothy Imani. All rights reserved.</p>
+          <div class="footer-bottom-links flex flex-wrap gap-6 justify-center">
+            <a href="privacy-policy.html" class="footer-legal-link text-sm text-slate-400 hover:text-sky-400">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="footer-legal-link text-sm text-slate-400 hover:text-sky-400">Terms of Service</a>
+            <a href="./Assets/Timothy_Imani_CV.pdf" download class="footer-legal-link text-sm text-slate-400 hover:text-sky-400">Download CV</a>
           </div>
         </div>
       </div>
 
-      <div class="footer-back-to-top">
-        <button id="backToTop" title="Back to Top">↑</button>
+      <div class="footer-back-to-top flex justify-end">
+        <button id="backToTop" title="Back to Top" class="bg-sky-500 text-white rounded-full px-5 py-2 text-base shadow-md fixed bottom-5 right-5 z-[1000] hover:bg-sky-700">↑</button>
       </div>
     </footer>
     

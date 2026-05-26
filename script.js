@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentHour = new Date().getHours();
 
     if (currentHour < 12) {
-        greetingElement.innerHTML = `Good Morning <span class="emoji">😊</span>`;
+        greetingElement.innerHTML = `Good Morning <span class="ml-2 text-black dark:text-slate-100">😊</span>`;
     } else if (currentHour < 18) {
-        greetingElement.innerHTML = `Good Afternoon <span class="emoji">😎</span>`;
+        greetingElement.innerHTML = `Good Afternoon <span class="ml-2 text-black dark:text-slate-100">😎</span>`;
     } else {
-        greetingElement.innerHTML = `Good Evening <span class="emoji">😎</span>`;
+        greetingElement.innerHTML = `Good Evening <span class="ml-2 ">😎</span>`;
     }
 
     //typing effect
     new Typed(".input", {
-        strings: ["Software Developer", "Database Administrator", "Data Engineer"],
+        strings: ["Software Engineer", "Database Administrator", "Web Developer", "Tech Enthusiast"],
         typeSpeed: 100,
         backSpeed: 100,
         loop: true
@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         const isDark = savedTheme === "dark";
-        body.classList.toggle("dark-mode", isDark);
+        body.classList.toggle("dark", isDark);
         themeToggle.textContent = isDark ? "☀" : "☾";
     }
 
     themeToggle.addEventListener("click", () => {
-        const isDarkMode = body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.toggle("dark");
         themeToggle.textContent = isDarkMode ? "☀" : "☾";
         localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     });
@@ -54,12 +54,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const toolIcons = document.querySelectorAll('.tools-track img');
     
+    const activeClasses = ['bg-gradient-to-br', 'from-primary', 'to-primary-light', 'text-white', 'border-primary', 'shadow-md'];
+    const inactiveClasses = ['bg-gradient-to-br', 'from-slate-50', 'to-slate-200', 'text-slate-600', 'border-slate-200'];
+
+    const setActive = (btn) => {
+        btn.classList.add(...activeClasses);
+        btn.classList.remove(...inactiveClasses);
+    };
+
+    const setInactive = (btn) => {
+        btn.classList.remove(...activeClasses);
+        btn.classList.add(...inactiveClasses);
+    };
+
     filterButtons.forEach(button => {
+        if (button.classList.contains('active')) {
+            setActive(button);
+        } else {
+            setInactive(button);
+        }
+
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                setInactive(btn);
+            });
+
             button.classList.add('active');
+            setActive(button);
             
             const category = button.getAttribute('data-category');
             

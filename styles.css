@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* General Styles */
 :root {
   --page-max-width: 1200px;
