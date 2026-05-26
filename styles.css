@@ -70,8 +70,9 @@ nav ul li a {
 
 nav ul li a:hover {
   will-change: background-color, color, border-color;
-  color: black;
-  border-color: blue;
+  color: #0000ff;
+  background-color: rgba(0, 0, 255, 0.06);
+  border-color: transparent;
 }
 
 @media (max-width: 768px) {
