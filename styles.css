@@ -959,9 +959,9 @@ h2 {
 /* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.5rem;
-  padding: 1.5rem 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 0;
     text-align: center;
 }
 .project-card {
@@ -971,14 +971,14 @@ h2 {
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+  align-items: stretch;
     gap: 1rem;
 }
 
 .project-image {
     width: 100%;
-    max-width: 200px;
-    height: auto;
+  max-width: 100%;
+  height: 200px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1038,9 +1038,9 @@ body.dark-mode .project-title p {
     color:blue;
 }
 .project-card p {
-    font-size: 18px;
+  font-size: 16px;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    line-height: 1.8;
+  line-height: 1.6;
     color: black;
 }
 
@@ -1196,6 +1196,7 @@ body.dark-mode .project-title p {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  object-position: top;
   display: block;
 }
 

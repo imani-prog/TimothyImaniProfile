@@ -273,26 +273,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Project Details Toggle Functionality
-function toggleProjectDetails(button) {
-    const projectDetails = button.nextElementSibling;
-    const icon = button.querySelector('.expand-icon');
-    
-    if (projectDetails.classList.contains('expanded')) {
-        // Collapse
-        projectDetails.classList.remove('expanded');
-        button.classList.remove('active');
-        button.setAttribute('aria-expanded', 'false');
-        icon.className = 'fas fa-chevron-down expand-icon';
-    } else {
-        // Expand
-        projectDetails.classList.add('expanded');
-        button.classList.add('active');
-        button.setAttribute('aria-expanded', 'true');
-        icon.className = 'fas fa-chevron-up expand-icon';
-    }
-}
-
 // Initialize project cards animation on load
 document.addEventListener('DOMContentLoaded', function() {
     // Animate project cards on scroll
